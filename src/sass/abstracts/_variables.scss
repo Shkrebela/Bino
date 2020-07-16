@@ -1,0 +1,46 @@
+
+
+//variables of fonts
+
+$font-family--first: 'Open Sans', sans-serif;
+$font-family--second: 'Source Sans Pro', sans-serif;
+$font-size: 14px;
+$bold: 700;
+$regular: 400;
+$semi-bold: 600;
+$font-style: italic;
+
+//%font-first { font: $regular $font-size $font-family--first }
+//%font-second { font: $regular $font-size $font-family--second }
+$font-first: $regular $font-size $font-family--first;
+$font-second: $regular $font-size $font-family--second;
+  //$font-first--regular: $regular $font-size $font-family-first;
+  //$font-first--bold: $bold $font-size $font-family-first;
+  //$font-first--semi-bold: $semi-bold $font-size $font-family-first;
+  //$font-first--semi-bold-italic: $font-style $semi-bold $font-size $font-family-first;
+  //$font-second--regular: $regular $font-size $font-family-second;
+  //$font-second--bold: $bold $font-size $font-family-second;
+  //$font-second--semi-bold: $semi-bold $font-size $font-family-second;
+
+  @mixin flex($row, $column) {
+    display: flex;
+    justify-content: $row;
+    align-items: $column;
+  }
+
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+   //@media (max-width: 600px) {
+   // flex-wrap: wrap;
+   //}
+
+
+$media-phone: 400px;
+$media-tablet: 600px;
+//$media-netbook: 600px;
+$media-notebook: 1024px;
+$media-PC: 1920px;

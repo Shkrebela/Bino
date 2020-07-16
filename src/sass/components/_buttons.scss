@@ -1,0 +1,39 @@
+/*mobile button menu*/
+
+  .js-menu-toggle__line {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #f4f5f9;
+    transition: 0s;
+
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 25px;
+      height: 2px;
+      background-color: inherit;
+      transition: all .3s ease-in-out;
+
+    }
+    &::before { top: -8px }
+    &::after { top: 8px }
+
+    .js-menu-toggle_active &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    .js-menu-toggle_active &::after {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    .js-menu-toggle_active & {
+      width: 0;
+      background-color: #e74c3c;
+    }
+  }
+
+
