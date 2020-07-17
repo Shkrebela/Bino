@@ -5,7 +5,7 @@
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #f4f5f9;
+    background-color: $white-color;
     transition: 0s;
 
 
@@ -32,8 +32,10 @@
     }
     .js-menu-toggle_active & {
       width: 0;
-      background-color: #e74c3c;
+      background-color: $primary-color;
     }
   }
-
+body.js-menu-toggle_active {
+  overflow: hidden;
+}
 

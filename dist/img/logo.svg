@@ -1,0 +1,36 @@
+<svg width="141" height="52" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="wdkua">
+   <path id="svg_1" d="m43.889259,11.761922l99.046,0l0,51.999l-99.046,0l0,-51.999z" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g fill="#f4f5f9" id="svg_4">
+   <path id="svg_5" d="m0.645086,0l51.676,0l0,51.999l-51.676,0l0,-51.999z" fill="#f4f5f9"/>
+  </g>
+  <g id="svg_8">
+   <g id="svg_9">
+    <text id="svg_10" x="14.097111" y="40.03075" font-weight="700" font-style="none" font-size="41.54" font-family="'Open Sans','OpenSans-Bold'" fill="#4a4c55">
+     <tspan id="svg_11">B</tspan>
+    </text>
+   </g>
+  </g>
+  <g id="svg_12">
+   <g id="svg_13">
+    <text id="svg_14" x="57.57479" y="40.034051" font-weight="700" font-style="none" font-size="41.54" font-family="'Open Sans','OpenSans-Light'" fill="#f1ebe7">
+     <tspan id="svg_15">INO</tspan>
+    </text>
+   </g>
+  </g>
+  <g id="svg_23">
+   <rect stroke="#000" id="svg_19" height="2.91273" width="89.064655" y="0.006656" x="51.605435" stroke-width="0" fill="#f4f5f9"/>
+   <rect stroke="#000" transform="rotate(90 139.51811218261722,25.90825653076173) " id="svg_20" height="2.587523" width="51.736891" y="24.614495" x="113.649665" stroke-width="0" fill="#f4f5f9"/>
+   <rect stroke="#000" id="svg_22" height="2.587523" width="89.064655" y="49.438129" x="51.930642" stroke-width="0" fill="#f4f5f9"/>
+  </g>
+ </g>
+</svg>

@@ -4,7 +4,7 @@
 @import 'base/_reset.scss';
 
 @import 'components/_buttons.scss';
-//@import 'components/carousel';
+@import 'components/_carousel.scss';
 //@import 'components/slider';
 @import 'base/_typography.scss';
 //@import 'layout/navigation';
@@ -20,3 +20,4 @@
 //
 //@import 'themes/theme';
 //@import 'themes/admin';
+@import 'vendors/_swiper.scss';

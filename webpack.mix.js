@@ -14,3 +14,4 @@ const mix = require('laravel-mix');
 mix.js('src/js/main.js', 'dist/js')
     .sass('src/sass/main.scss', 'dist/css');
 mix.copy('src/font', 'dist/font');
+mix.copy('src/img', 'dist/img');

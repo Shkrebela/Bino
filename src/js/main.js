@@ -1,7 +1,18 @@
+import Swiper, { Navigation } from 'swiper';
+
+// configure Swiper to use modules
+Swiper.use([Navigation]);
+
+var swiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 //mobil button
-
-
-
 let menuToggle = document.getElementById('js-menu-toggle');
 let menu = document.querySelector('.main-header__menu');
 let body = document.querySelector('body');

@@ -1,9 +1,9 @@
 .main-header {
   position: fixed;
   width: 100%;
-  padding: 15px;
-  background-color: rgba(58, 62, 100, 0.85);
-
+  padding: $main-padding;
+  //background-color: rgba(58, 62, 100, 0.85);
+  z-index: 10;
   .main-header_container {
     @extend .container;
     @include flex(space-between, center);
@@ -24,7 +24,7 @@
       @media (max-width: $media-tablet) {
         position: absolute;
         top:0;
-        left: 100vw;
+        left: 100%;
         background-color: rgba(36, 36, 36, 0.94);
         flex-direction: column;
         padding: 5% 0 10% 0;
@@ -40,8 +40,8 @@
         cursor: pointer;
 
         &:hover {
-          color: #e74c3c;
-          border-bottom: 1px solid #e74c3c;
+          color: $primary-hover-color;
+          border-bottom: 1px solid $primary-hover-color;
           transition: 0.3s;
           @media (max-width: $media-tablet) {
             border-bottom: 1px solid transparent;
