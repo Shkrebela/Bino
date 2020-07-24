@@ -1,41 +1,75 @@
 /*mobile button menu*/
 
-  .js-menu-toggle__line {
-    position: relative;
-    display: block;
+.js-menu-toggle__line {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: $white-color;
+  transition: 0s;
+
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    right: 0;
     width: 25px;
     height: 2px;
-    background-color: $white-color;
-    transition: 0s;
+    background-color: inherit;
+    transition: all .3s ease-in-out;
 
-
-    &::before, &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 25px;
-      height: 2px;
-      background-color: inherit;
-      transition: all .3s ease-in-out;
-
-    }
-    &::before { top: -8px }
-    &::after { top: 8px }
-
-    .js-menu-toggle_active &::before {
-      top: 0;
-      transform: rotate(-45deg);
-    }
-    .js-menu-toggle_active &::after {
-      top: 0;
-      transform: rotate(45deg);
-    }
-    .js-menu-toggle_active & {
-      width: 0;
-      background-color: $primary-color;
-    }
   }
+
+  &::before {
+    top: -8px
+  }
+
+  &::after {
+    top: 8px
+  }
+
+  .js-menu-toggle_active &::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .js-menu-toggle_active &::after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .js-menu-toggle_active & {
+    width: 0;
+    background-color: $primary-color;
+  }
+}
+
 body.js-menu-toggle_active {
   overflow: hidden;
 }
 
+//link
+
+.link {
+  @include flex(center, center);
+  max-width: 16em;
+  flex: 1 0 14em;
+  width: 100%;
+  height: 4em;
+  border: 1px solid $primary-color;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  margin: 0 15px 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font: $font-first;
+  font-weight: 700;
+  font-size: 1em;
+  color: $white-color;
+  background-color: $primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover-color;
+    border: 1px solid $primary-hover-color;
+  }
+}

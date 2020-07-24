@@ -1,10 +1,12 @@
-@import 'abstracts/_variables.scss';
 
-@import 'base/_typography.scss';
 @import 'base/_reset.scss';
+@import 'abstracts/_variables.scss';
+@import 'base/_typography.scss';
 
 @import 'components/_buttons.scss';
 @import 'components/_carousel.scss';
+@import 'components/_separator.scss';
+@import 'components/_pop-up.scss';
 //@import 'components/slider';
 @import 'base/_typography.scss';
 //@import 'layout/navigation';
@@ -13,6 +15,7 @@
 //@import 'layout/footer';
 //@import 'layout/sidebar';
 //@import 'layout/forms';
+@import 'vendors/_swiper.scss';
 
 @import 'pages/_home.scss';
 //@import 'pages/about';
@@ -20,4 +23,3 @@
 //
 //@import 'themes/theme';
 //@import 'themes/admin';
-@import 'vendors/_swiper.scss';

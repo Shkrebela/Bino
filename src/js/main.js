@@ -1,9 +1,9 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, Mousewheel } from 'swiper';
 
 // configure Swiper to use modules
-Swiper.use([Navigation]);
+Swiper.use([Navigation, Pagination, Mousewheel]);
 
-var swiper = new Swiper('.swiper-container', {
+var swiper1 = new Swiper('.primary-screen__swiper-container', {
     direction: 'horizontal',
     loop: true,
     navigation: {
@@ -11,6 +11,29 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+var swiper2 = new Swiper('.about-company__swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: false,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+var swiper3 = new Swiper('.case-study__swiper-container', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    mousewheel: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 
 //mobil button
 let menuToggle = document.getElementById('js-menu-toggle');

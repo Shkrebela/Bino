@@ -2,8 +2,10 @@
   position: fixed;
   width: 100%;
   padding: $main-padding;
-  //background-color: rgba(58, 62, 100, 0.85);
-  z-index: 10;
+  background-color: rgba(83, 83, 83, 0.40);
+  z-index: 100;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
   .main-header_container {
     @extend .container;
     @include flex(space-between, center);
@@ -38,6 +40,7 @@
         padding: 20px 5px;
         border-bottom: 1px solid transparent;
         cursor: pointer;
+        color: $white-color;
 
         &:hover {
           color: $primary-hover-color;
@@ -59,6 +62,29 @@
         display: block;
       }
       }
+  }
+}
+
+.section-header {
+  text-align: center;
+
+  .section-header__title {
+    font: $font-second;
+    text-transform: uppercase;
+    font-size: 2.57rem;
+    font-weight: $semi-bold;
+    color: $dark-color;
+    margin-bottom: 29px;
+  }
+
+  .section-header__text {
+    margin-bottom: 28px;
+
+  }
+
+  .section-header__separator {
+    margin-bottom: 68px;
+    fill: $text-dark-color;
   }
 }
 

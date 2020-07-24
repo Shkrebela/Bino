@@ -41,9 +41,10 @@ $font-second: $regular $font-size $font-family--second;
 
 $media-phone: 400px;
 $media-tablet: 600px;
-//$media-netbook: 600px;
+$media-netbook: 800px;
 $media-notebook: 1024px;
-$media-PC: 1920px;
+$media-PC1: 1400px;
+$media-PC2: 1920px;
 .d {
   color: white;
 }
@@ -53,6 +54,12 @@ $main-padding: 15px;
 
 //color
 $primary-color: #e74c3c;
-$primary-hover-color: #e74e3e;
+$primary-color-transparent: rgba(231, 76, 60, 0.8);
+$primary-hover-color: lighten(#e74e3e, 5%);
+//$primary-hover-color: #e74e3e;
 $dark-color: #6a6a6a;
 $white-color: #f4f5f9;
+$text-white-color: #cbc6c0;
+$text-dark-color: #999999;
+$additional-dark-color: #202020;
+$snow-white-color: #fff;

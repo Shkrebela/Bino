@@ -10747,13 +10747,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
  // configure Swiper to use modules
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
-var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["Mousewheel"]]);
+var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.primary-screen__swiper-container', {
   direction: 'horizontal',
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  }
+});
+var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.about-company__swiper-container', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: false,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
+});
+var swiper3 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.case-study__swiper-container', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
   }
 }); //mobil button
 

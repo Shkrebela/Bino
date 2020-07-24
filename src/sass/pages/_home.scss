@@ -17,10 +17,11 @@
 //  @include flex(center, )}
 .primary-screen {
   width: 100%;
-  height: 100%;
+  height: 95vh;
   background-size: cover;
   position: relative;
   background-position: center;
+  padding: 100px 0 50px;
   //padding: $main-padding;
   &::before {
     content: "";
@@ -36,7 +37,7 @@
     position: absolute;
     content: "";
     z-index: 5;
-    bottom: 0;
+    bottom: -0.2%;
     left: 0;
     border-top: 10vh solid transparent;
     border-right: 50vw solid #fff;
@@ -44,48 +45,763 @@
   }
 
   .primary-screen__container {
+    @include flex(center, center);
+
     max-width: 1920px;
-    height: 100vh;
+    height: 100%;
     //padding: 15px;
+
+    .wrapper-slide {
+      color: $white-color;
+      text-align: center;
+      font-size: 1rem;
+      @media (max-width: $media-PC1) {
+        font-size: 0.6rem;
+      }
+      @media (max-width: $media-notebook) {
+        font-size: 0.5rem;
+      }
+      @media (max-width: $media-tablet) {
+        font-size: 0.4rem;
+      }
+
+      .wrapper-slide__slogan-greeting {
+        font-size: 1.71em;
+        font-weight: 400;
+        color: $white-color;
+        margin-bottom: 1.8797em;
+      }
+
+      .wrapper-slide__slogan-company {
+        font-size: 5.14em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white-color;
+        margin: 0 15px 0.632em;
+      }
+
+      .wrapper-slide__separator {
+        width: 197px;
+        height: 7px;
+        margin-bottom: 3.214em;
+        fill: $white-color;
+      }
+
+      .wrapper-slide__about-company {
+        max-width: 620px;
+        //padding: 0 30px;
+        color: $text-white-color;
+        margin: 0 30px 4.857em;
+        font-size: 1em;
+      }
+
+      .wrapper-slide__link-box {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        padding: 15px;
+
+        .wrapper-slide__link {
+          margin: 0 15px;
+          border: 1px solid $white-color;
+          color: $white-color;
+          background-color: transparent;
+
+          &:hover {
+            background-color: $primary-hover-color;
+            border: 1px solid $primary-hover-color;
+          }
+        }
+      }
+    }
+
+    .arrow-down {
+      @include flex(center, center);
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: #f4f5f9;
+      z-index: 15;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 74px;
+        height: 74px;
+        background-color: $white-color;
+        opacity: 0.25;
+      }
+
+      a {
+        display: block;
+        @include flex(center, center);
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        width: 22px;
+        height: 31px;
+        fill: $primary-color;
+        z-index: 20;
+      }
+
+      &:hover svg {
+        fill: $primary-hover-color;
+      }
+    }
   }
 }
 
-.slider {
-  width: 100%;
+.advantages {
+  padding: 125px 0 110px 0;
+  border-bottom: 1px solid #e6e7eb;
+
+  .advantages__container {
+    @include flex(space-around, center);
+    @media (max-width: $media-netbook) {
+      flex-wrap: wrap;
+    }
+
+    .advantages__box {
+      @include flex(center, center);
+      flex-direction: column;
+      min-width: 200px;
+      width: 100%;
+      flex: 0 1 300px;
+      padding: 15px 28px;
+
+      .advantages__decoration {
+        @include flex(center, center);
+        width: 73px;
+        height: 73px;
+        border: 1px solid rgba(153, 153, 153, 0.25);
+        margin-bottom: 30px;
+
+
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: $primary-color;
+
+        }
+      }
+
+      .advantages__title {
+        @include flex(center, center);
+        text-transform: uppercase;
+        position: relative;
+        color: $dark-color;
+        margin-bottom: 38px;
+        flex-direction: column;
+        font-size: 1.286rem;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -19px;
+          width: 41px;
+          height: 1px;
+          background-color: $dark-color;
+          //border: 3px solid #6a6a6a;
+        }
+      }
+
+      .advantages__text {
+        text-align: center;
+        color: $text-dark-color;
+        font-size: 0.857rem;
+      }
+
+      &:hover .advantages__decoration {
+        transform: rotate(45deg);
+        transition: 0.6s ease-out;
+        border: 1px solid $primary-color;
+      }
+
+      &:hover .advantages__decoration svg {
+        transform: rotate(-45deg);
+        transition: 0.6s ease-out;
+      }
+
+      &:hover .advantages__title {
+        color: $primary-color;
+      }
+    }
+  }
 }
 
-.wrapper-slide {
-  color: $white-color;
-  text-align: center;
-  font-size: 1rem;
-  @media (max-width: $media-notebook) {
-    font-size: 0.8rem;
+.history {
+  padding: 140px 0 145px 0;
+
+  .history__container {
+    @include flex(space-between, center);
+    @media (max-width: $media-tablet) {
+      flex-wrap: wrap;
+    }
+
+    .monitor {
+      max-width: 100%;
+      margin-right: 77px;
+      margin-bottom: 15px;
+      //height: 407px;
+    }
+
+    .history__description {
+      max-width: 582px;
+
+      .history__title {
+        color: $dark-color;
+        @include flex(flex-start, center);
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        font-size: 2.57rem;
+
+        &:before {
+          content: "";
+          width: 6px;
+          height: 36px;
+          margin-right: 29px;
+          background-color: $primary-color;
+        }
+      }
+
+      .history__text {
+        color: $text-dark-color;
+        margin-bottom: 48px;
+
+      }
+    }
   }
-  @media (max-width: $media-tablet) {
-    font-size: 0.6rem;
-  }
+}
+
+.about-company {
+  position: relative;
+  background-color: $additional-dark-color;
+
+  .about-company__swiper-container {
+    @include flex(center, center);
+    height: 800px;
+    @media (max-width: $media-notebook) {
+      height: 1500px;
+    }
+
+    .our-services {
+
+      @include flex(center, center);
+      @media (max-width: $media-notebook) {
+        flex-direction: column;
+      }
+
+      .our-services__description {
+        @include flex(center, flex-end);
+        flex-direction: column;
+        width: 50%;
+        margin-right: 80px;
+        padding: 50px 0 50px 100px;
+
+        @media (max-width: $media-notebook) {
+          width: 100%;
+        }
+
+        .our-services__title {
+          color: $white-color;
+          @include flex(flex-end, center);
+          text-transform: uppercase;
+          margin-bottom: 78px;
+          font-size: 2.57rem;
+
+          &:after {
+            content: "";
+            width: 6px;
+            height: 36px;
+            margin-left: 30px;
+            background-color: $primary-color;
+          }
+        }
 
 
-  .wrapper-slide__slogan-greeting {
-    font-size: 1.71em;
-    font-weight: 400;
-    margin-bottom: 1.8797em;
+        .our-services__sub-description {
+          @include flex(center, flex-end);
+          flex-direction: column;
+
+          position: relative;
+
+          .our-services__sub-title {
+            text-transform: uppercase;
+            margin-bottom: 19px;
+            color: $primary-color;
+            font-size: 1.286rem;
+          }
+
+          .our-services__text {
+            text-align: right;
+            margin-bottom: 68px;
+          }
+
+          .our-services__icon {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            right: -112px;
+            top: 0;
+            border-radius: 100%;
+            background-color: $white-color;
+
+            &::after {
+              content: "";
+              position: absolute;
+              border-radius: 100%;
+              top: -5px;
+              left: -5px;
+              width: 74px;
+              height: 74px;
+              background-color: $white-color;
+              opacity: 0.25;
+            }
+
+            .icon-svg {
+              width: 20px;
+              height: 100%;
+              fill: $primary-color;
+            }
+          }
+        }
+
+      }
+
+      .our-services__image {
+        width: 50%;
+        //flex: 1 0 100px;
+        //display: block;
+        //max-width: 100%;
+        height: 100%;
+        //height: 100%;
+        object-fit: cover;
+        @media (max-width: $media-notebook) {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .about-company__swiper-pagination {
+      left: 25px;
+      right: unset;
+
+      .swiper-pagination-bullet {
+        padding: 5px 25px;
+        border-radius: 0;
+        background-color: transparent;
+        width: 1px;
+        height: 34px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 34px;
+          background-color: $dark-color;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: transparent;
+        width: 2px;
+
+
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          background-color: $primary-color;
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  padding: 140px 0 0;
+
+  .portfolio__menu {
+    @include flex(center, center);
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    .portfolio__link-box {
+      text-transform: uppercase;
+      color: $text-dark-color;
+
+      &::after {
+        content: "/";
+        margin: 0 15px;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      .portfolio__link {
+        color: $text-dark-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
   }
 
-  .wrapper-slide__slogan-company {
-    font-size: 5.14em;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0.632em;
-  }
+  .portfolio__project {
+    @include flex(center, center);
+    flex-wrap: wrap;
 
-  .wrapper-slide__separator {
+    .project__card {
+      position: relative;
+      width: 25%;
+      //width: 100%;
+      //height: 480px;
+      background-color: #00d089;
+      line-height: 0;
+      @media (max-width: $media-notebook) {
+        width: 50%;
+      }
+      @media (max-width: $media-tablet) {
+        width: 100%;
+      }
+
+      .card__img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .card__box {
+        @include flex(flex-end, flex-start);
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color-transparent;
+        opacity: 0;
+        padding: 50px;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .card__title {
+          font: $font-second;
+          font-size: 1.74rem;
+          font-weight: $semi-bold;
+          text-transform: uppercase;
+          color: $white-color;
+          margin-bottom: 21px;
+        }
+
+        .card_description {
+          color: $white-color;
+        }
+      }
+
+      .card__img {
+        &.pop-up {
+        }
+      }
+    }
+  }
+}
+
+.case-study {
+  padding: 140px 0;
+  background-color: $white-color;
+
+  .case-study__box {
+    position: relative;
+    @include flex(flex-start, center);
     max-width: 100%;
-    margin-bottom: 3.214em;
-  }
 
-  .wrapper-slide__about-company {
-    max-width: 580px;
-    margin: 0 68px auto;
+    .case-study__swiper-container {
+      max-width: 665px;
+      margin: 30px 10% 30px 0;
+      width: 100%;
+      height: 87%;
+
+      .case-study__swiper-slide {
+        .case-study__block {
+          padding: 80px 61px 115px;
+          z-index: 1;
+          background-color: $snow-white-color;
+          @media (max-width: $media-netbook) {
+            padding: 80px 25px 115px
+          }
+
+          .case-study__decoration {
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            background-color: $primary-color;
+            margin: 0 auto 60px;
+
+            .case-study__icon-svg {
+              width: 40px;
+              height: 100%;
+              transform: rotate(-45deg);
+              fill: $snow-white-color;
+            }
+          }
+
+          .case-study__title {
+            font: $font-first;
+            position: relative;
+            font-size: 1.286rem;
+            font-weight: $semi-bold;
+            color: $dark-color;
+            margin-bottom: 58px;
+
+            &::after {
+              content: "";
+              width: 41px;
+              height: 2px;
+              position: absolute;
+              bottom: -29px;
+              left: 50%;
+              transform: translateX(-50%);
+              background-color: $dark-color;
+            }
+          }
+
+          .case-study__description {
+            margin-bottom: 46px;
+          }
+
+          .case-study__link {
+            font-size: 0.85rem;
+            max-width: 145px;
+            margin: 0 auto;
+            height: 45px;
+
+          }
+        }
+      }
+
+      .case-study__swiper-pagination {
+        bottom: 50px;
+
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background-color: $text-dark-color;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .case-study__image {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      object-fit: cover;
+    }
   }
 }
+
+.counter {
+  position: relative;
+  padding: 155px 15px 142px;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    //z-index: 0;
+  }
+
+  .counter__container {
+    @include flex(space-around, center);
+    flex-wrap: wrap;
+    z-index: 10;
+
+    .counter__index {
+      @include flex(center, center);
+      flex-direction: column;
+      z-index: 10;
+      margin: 30px;
+
+      .index__circle {
+        @include flex(center, center);
+        width: 112px;
+        height: 112px;
+        border-radius: 100%;
+        border: 1px solid $white-color;
+        margin-bottom: 45px;
+
+        .index__icon {
+          width: 31px;
+          fill: $white-color;
+        }
+      }
+
+      .index__score {
+        font: $font-second;
+        font-weight: $bold;
+        font-size: 2.14rem;
+        color: $white-color;
+        margin-bottom: 5px;
+
+      }
+
+      .index__title {
+        font: $font-second;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.pricing {
+  padding: 140px 0;
+  background-color: $snow-white-color;
+
+  .pricing__box {
+    @include flex(flex-start, center);
+
+    .price-card {
+      max-width: 380px;
+      width: 100%;
+      position: relative;
+      margin: 15px;
+
+      &:hover .price-card__header {
+        background-color: $primary-color;
+      }
+
+      &:hover .circle__price {
+        color: $primary-color;
+      }
+
+      .price-card__header {
+        padding: 50px 80px 136px;
+        font-weight: $bold;
+        color: $white-color;
+        font-size: 1.714rem;
+        text-transform: uppercase;
+        background-color: $text-dark-color;
+        position: relative;
+        text-align: center;
+
+        .price-card__circle {
+          @include flex(center, center);
+          flex-direction: column;
+          width: 154px;
+          height: 154px;
+          background-color: $snow-white-color;
+          border-radius: 100%;
+          position: absolute;
+          text-transform: none;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          color: $text-dark-color;
+
+          &::after {
+            content: "";
+            width: 174px;
+            height: 174px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            background-color: $snow-white-color;
+            opacity: 0.25;
+            z-index: 0;
+          }
+
+          .circle__price {
+            font: $font-second;
+            font-size: 2.857rem;
+            font-weight: $bold;
+            z-index: 1;
+          }
+
+          .circle__time {
+            font: $font-second;
+            font-size: 0.928rem;
+            z-index: 1;
+
+          }
+        }
+      }
+
+      .price-card__body {
+        padding: 125px 80px 50px;
+        background-color: $white-color;
+        text-align: center;
+
+        .price-card__description {
+          margin-bottom: 48px;
+          font-weight: $semi-bold;
+          line-height: 40px;
+        }
+
+        .link {
+          margin: 0;
+          background-color: $text-dark-color;
+          border: 1px solid $text-dark-color;
+
+          &:hover {
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.team {
+  position: relative;
+  padding: 155px 15px 142px;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    //z-index: 0;
+  }
+}
+
+.collaboration {
+  padding: 140px 0;
+  background-color: $snow-white-color;
+
+
+}
+
+
+
+
