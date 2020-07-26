@@ -10,19 +10,18 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600&family=Source+Sans+Pro:wght@400;600;700&display=swap"
           rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../dist/css/main.css">
+    <link type="text/css" rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/solid.css"
           integrity="sha384-wG7JbYjXVhle8f17qIp6KJaO/5PsPzOrT76RgvdRGLHj0yXZZ3jg98yb0GNRv1+M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/fontawesome.css"
           integrity="sha384-O6duc3QftgMWW3awKiGYswymy288kVFZgGWC/4YCl48Y0codWJRgs8DA0N4dX/zx" crossorigin="anonymous">
-
 </head>
-<body>
+<body class="body">
 <header class="main-header">
-    <div class="main-header_container container">
+    <div class="main-header__container container">
         <a class="logo" href="./index.html">
             <!--            <img class="logo_img" src="./img/logo.png" alt="Logo Bino">-->
-            <img class="logo_img"
+            <img class="logo__img"
                  src="data:image/png;base64,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"
                  alt="Logo Bino">
         </a>
@@ -35,8 +34,8 @@
             <a class="main-header__link" href="#">Blog</a>
             <a class="main-header__link" href="#">Contact</a>
         </nav>
-        <div class="js-menu-toggle" id="js-menu-toggle">
-            <span class="js-menu-toggle__line"></span>
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="menu-toggle__line"></span>
         </div>
     </div>
 </header>
@@ -305,7 +304,8 @@
         <div class="portfolio__container">
             <div class="portfolio__header section-header">
                 <h2 class="section-header__title">Recent portfolio</h2>
-                <p class="section-header__text">It has survived not only five centuries, but also the leap scrambled it to
+                <p class="section-header__text">It has survived not only five centuries, but also the leap scrambled it
+                    to
                     make a
                     type.</p>
                 <svg class="section-header__separator separator">
@@ -584,7 +584,22 @@
         </div>
     </section>
     <section class="team" id="team" style="background-image: url('./img/team-background.jpg')">
-
+        <div class="team__container container">
+            <div class="container__header section-header section-header--asd ">
+                <h2 class="section-header__title">Our pricing</h2>
+                <p class="section-header__text">A 30 days free trial for all. A brief story about how this process
+                    works, keep an
+                    eye till the end.</p>
+                <svg class="section-header__separator separator">
+                    <use xlink:href="./img/sprite.svg#separator"></use>
+                </svg>
+                <div class="section-header__box">
+                </div>
+            </div>
+            <svg class="team__background-shape">
+                <use xlink:href="./img/sprite.svg#background-shape"></use>
+            </svg>
+        </div>
     </section>
 
 
@@ -600,16 +615,17 @@
                 </svg>
                 <div class="section-header__box">
                 </div>
-                <div class="price-card">
-
-                </div>
+            </div>
+            <div class="price-card">
 
             </div>
         </div>
     </section>
 
+
+
 </main>
 <footer></footer>
-<script src="../dist/js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

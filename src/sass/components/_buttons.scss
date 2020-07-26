@@ -1,51 +1,62 @@
 /*mobile button menu*/
+.menu-toggle {
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  padding: 15px 5px;
+  z-index: 150;
+  @media (max-width: $media-tablet) {
+    display: block;
+  }
 
-.js-menu-toggle__line {
-  position: relative;
-  display: block;
-  width: 25px;
-  height: 2px;
-  background-color: $white-color;
-  transition: 0s;
+  &--active-menu-toggle {
+    .menu-toggle__line {
 
+      &::before {
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+      }
 
-  &::before, &::after {
-    content: "";
-    position: absolute;
-    right: 0;
+      &::after {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+      }
+
+      width: 0;
+      background-color: $primary-color;
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: block;
     width: 25px;
     height: 2px;
-    background-color: inherit;
-    transition: all .3s ease-in-out;
+    background-color: $white-color;
+    transition: 0s;
 
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 25px;
+      height: 2px;
+      background-color: inherit;
+      transition: all .3s ease-in-out;
+
+    }
+
+    &::before {
+      top: -8px
+    }
+
+    &::after {
+      top: 8px
+    }
   }
-
-  &::before {
-    top: -8px
-  }
-
-  &::after {
-    top: 8px
-  }
-
-  .js-menu-toggle_active &::before {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-
-  .js-menu-toggle_active &::after {
-    top: 0;
-    transform: rotate(45deg);
-  }
-
-  .js-menu-toggle_active & {
-    width: 0;
-    background-color: $primary-color;
-  }
-}
-
-body.js-menu-toggle_active {
-  overflow: hidden;
 }
 
 //link

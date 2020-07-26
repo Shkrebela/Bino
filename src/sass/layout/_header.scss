@@ -1,74 +1,63 @@
 .main-header {
   position: fixed;
   width: 100%;
-  padding: $main-padding;
+  padding: 0 $main-padding;
   background-color: rgba(83, 83, 83, 0.40);
   z-index: 100;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 
-  .main-header_container {
+  &__container {
     @extend .container;
     @include flex(space-between, center);
+  }
 
-    .logo_img {
-      width: 141px * 0.8;
-      height: 52px * 0.8;
-      margin-right: 20px;
+  &__menu {
+    @include flex(space-between, center);
+    font: $font-first;
+    text-transform: uppercase;
+    color: #f4f5f9;
+    max-width: 650px;
+    width: 100%;
+    @media (max-width: $media-tablet) {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: $additional-dark-color-transparent;
+      flex-direction: column;
+      padding: 10% 0 15% 0;
+      width: 100vw;
+      height: 100vh;
+      transition: .3s ease-in-out;
     }
 
-    .main-header__menu {
-      @include flex(space-between, center);
-      font: $font-first;
-      text-transform: uppercase;
-      color: #f4f5f9;
-      max-width: 650px;
-      width: 100%;
+    &--active-menu-toggle {
+      left: 0;
+    }
+  }
+
+  &__link {
+    @include flex(center, center);
+    white-space: nowrap;
+    padding: 20px 5px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    color: $white-color;
+
+    &:hover {
+      color: $primary-hover-color;
+      border-bottom: 1px solid $primary-hover-color;
+      transition: 0.3s;
       @media (max-width: $media-tablet) {
-        position: absolute;
-        top:0;
-        left: 100%;
-        background-color: rgba(36, 36, 36, 0.94);
-        flex-direction: column;
-        padding: 5% 0 10% 0;
-        width: 100vw;
-        height: 100vh;
-        transition: .3s ease-in-out;
-      }
-      .main-header__link {
-        @include flex(center, center);
-        white-space: nowrap;
-        padding: 20px 5px;
         border-bottom: 1px solid transparent;
-        cursor: pointer;
-        color: $white-color;
-
-        &:hover {
-          color: $primary-hover-color;
-          border-bottom: 1px solid $primary-hover-color;
-          transition: 0.3s;
-          @media (max-width: $media-tablet) {
-            border-bottom: 1px solid transparent;
-          }
-        }
-      }
-      &.js-menu-toggle_active {
-        left: 0;
       }
     }
-    .js-menu-toggle {
-      display: none;
-      cursor: pointer;
-      @media (max-width: $media-tablet) {
-        display: block;
-      }
-      }
   }
 }
 
 .section-header {
   text-align: center;
 
-  .section-header__title {
+  &__title {
     font: $font-second;
     text-transform: uppercase;
     font-size: 2.57rem;
@@ -77,22 +66,12 @@
     margin-bottom: 29px;
   }
 
-  .section-header__text {
+  &__text {
     margin-bottom: 28px;
-
   }
 
-  .section-header__separator {
+  &__separator {
     margin-bottom: 68px;
     fill: $text-dark-color;
   }
 }
-
-
-
-
-
-
-
-
-

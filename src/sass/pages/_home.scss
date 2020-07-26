@@ -17,12 +17,14 @@
 //  @include flex(center, )}
 .primary-screen {
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   background-size: cover;
   position: relative;
   background-position: center;
   padding: 100px 0 50px;
   //padding: $main-padding;
+  overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -37,11 +39,12 @@
     position: absolute;
     content: "";
     z-index: 5;
-    bottom: -0.2%;
+    bottom: 0;
     left: 0;
     border-top: 10vh solid transparent;
     border-right: 50vw solid #fff;
     border-left: 50vw solid #fff;
+    border-bottom: 40px solid #fff;
   }
 
   .primary-screen__container {
@@ -122,7 +125,7 @@
       border-radius: 50%;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, 0);
       background-color: #f4f5f9;
       z-index: 15;
       cursor: pointer;
@@ -237,23 +240,26 @@
 }
 
 .history {
-  padding: 140px 0 145px 0;
+  padding: 140px 15px 115px;
 
   .history__container {
-    @include flex(space-between, center);
+    @include flex(space-around, center);
     @media (max-width: $media-tablet) {
-      flex-wrap: wrap;
     }
+    flex-wrap: wrap;
+
 
     .monitor {
       max-width: 100%;
       margin-right: 77px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       //height: 407px;
     }
 
     .history__description {
       max-width: 582px;
+      width: 100%;
+      flex: 1 0 300px;
 
       .history__title {
         color: $dark-color;
@@ -682,7 +688,8 @@
   background-color: $snow-white-color;
 
   .pricing__box {
-    @include flex(flex-start, center);
+    @include flex(space-around, center);
+    flex-wrap: wrap;
 
     .price-card {
       max-width: 380px;
@@ -779,6 +786,7 @@
 }
 
 .team {
+  background-image: url('../../img/team-background.jpg');
   position: relative;
   padding: 155px 15px 142px;
   background-size: cover;
@@ -791,7 +799,32 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
-    //z-index: 0;
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/Shape_174_copy.svg");
+  }
+
+  &__container {
+    position: relative;
+
+
+    .team__background-shape {
+      width: 100%;
+      fill: white;
+      fill-opacity: 1;
+      z-index: 10;
+
+    }
+
+
   }
 }
 
@@ -801,7 +834,6 @@
 
 
 }
-
 
 
 
