@@ -1,0 +1,124 @@
+.member-box {
+  @include flex(flex-start, center);
+  flex-direction: column;
+  width: 100px;
+  height: 60px;
+  position: relative;
+  bottom: 0;
+
+
+  &:hover {
+    transform: scale(1.54);
+    transition: 0.3s ease-in-out;
+
+    .member-box__description {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin: 50px 0 0;
+    text-align: center;
+    position: relative;
+    display: none;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 40px;
+      background-color: $text-dark-color;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      z-index: 0;
+    }
+  }
+
+  &__name {
+    color: $primary-color;
+    font-size: 1.11rem;
+    font-weight: bold;
+  }
+
+  &__position {
+    color: $snow-white-color;
+    font: $font-second;
+    font-size: 0.65rem;
+    font-weight: bold;
+  }
+
+  &--1 {
+    top: 110px;
+    @media (max-width: $media-PC2) {
+      top: 0;
+    }
+    @media (max-width: $media-PC1) {
+      top: -28px;
+    }
+    @media (max-width: $media-netbook) {
+      top: -45px;
+    }
+
+  }
+
+  &--2 {
+    top: -16px;
+    @media (max-width: $media-PC2) {
+      top: -39px;
+    }
+    @media (max-width: $media-PC1) {
+      top: -45px;
+    }
+    @media (max-width: $media-netbook) {
+      top: -45px;
+    }
+  }
+
+  &--3 {
+    top: -50px;
+    @media (max-width: $media-PC2) {
+      top: -40px;
+    }
+    @media (max-width: $media-PC1) {
+      top: -40px;
+    }
+    @media (max-width: $media-netbook) {
+      top: -45px;
+    }
+  }
+
+  &--4 {
+    top: -6px;
+    @media (max-width: $media-PC2) {
+      top: 0;
+    }
+    @media (max-width: $media-PC1) {
+      top: -12px;
+    }
+    @media (max-width: $media-netbook) {
+      top: -35px;
+    }
+  }
+
+  &--5 {
+    top: -215px;
+    @media (max-width: $media-PC2) {
+      top: -25px;
+    }
+    @media (max-width: $media-PC1) {
+      top: -10px;
+    }
+    @media (max-width: $media-netbook) {
+      top: -20px;
+    }
+  }
+
+  &__photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 3px solid $primary-color;
+    box-shadow: 3px 3px 11px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+}

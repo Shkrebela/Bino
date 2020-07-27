@@ -56,7 +56,7 @@
 
 .section-header {
   text-align: center;
-
+  //fill: $primary-color;
   &__title {
     font: $font-second;
     text-transform: uppercase;
@@ -71,7 +71,9 @@
   }
 
   &__separator {
+    @extend %color-svg;
     margin-bottom: 68px;
-    fill: $text-dark-color;
+    max-width: 195px;
+    height: 7px;
   }
 }

@@ -1,5 +1,3 @@
-
-
 //variables of fonts
 
 $font-family--first: 'Open Sans', sans-serif;
@@ -14,37 +12,37 @@ $font-style: italic;
 //%font-second { font: $regular $font-size $font-family--second }
 $font-first: $regular $font-size $font-family--first;
 $font-second: $regular $font-size $font-family--second;
-  //$font-first--regular: $regular $font-size $font-family-first;
-  //$font-first--bold: $bold $font-size $font-family-first;
-  //$font-first--semi-bold: $semi-bold $font-size $font-family-first;
-  //$font-first--semi-bold-italic: $font-style $semi-bold $font-size $font-family-first;
-  //$font-second--regular: $regular $font-size $font-family-second;
-  //$font-second--bold: $bold $font-size $font-family-second;
-  //$font-second--semi-bold: $semi-bold $font-size $font-family-second;
+//$font-first--regular: $regular $font-size $font-family-first;
+//$font-first--bold: $bold $font-size $font-family-first;
+//$font-first--semi-bold: $semi-bold $font-size $font-family-first;
+//$font-first--semi-bold-italic: $font-style $semi-bold $font-size $font-family-first;
+//$font-second--regular: $regular $font-size $font-family-second;
+//$font-second--bold: $bold $font-size $font-family-second;
+//$font-second--semi-bold: $semi-bold $font-size $font-family-second;
 
-  @mixin flex($row, $column) {
-    display: flex;
-    justify-content: $row;
-    align-items: $column;
-  }
+@mixin flex($row, $column) {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
+}
 
-  .container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-  }
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-   //@media (max-width: 600px) {
-   // flex-wrap: wrap;
-   //}
+//@media (max-width: 600px) {
+// flex-wrap: wrap;
+//}
 
 
-$media-phone: 400px;
-$media-tablet: 600px;
-$media-netbook: 800px;
-$media-notebook: 1024px;
-$media-PC1: 1400px;
-$media-PC2: 1920px;
+$media-phone: 400px - 100px;
+$media-tablet: 600px - 100px;
+$media-netbook: 800px - 100px;
+$media-notebook: 1024px - 100px;
+$media-PC1: 1400 - 100px;
+$media-PC2: 1920px - 100px;
 .d {
   color: white;
 }
@@ -64,3 +62,11 @@ $text-dark-color: #999999;
 $additional-dark-color: #202020;
 $additional-dark-color-transparent: rgba(32, 32, 32, 0.8);
 $snow-white-color: #fff;
+%color-svg {
+  --color-circle: #e74c3c;
+  --color-line: #999999;
+}
+:root {
+  --color-circle: #e74c3c;
+  --color-line: #999999;
+}
