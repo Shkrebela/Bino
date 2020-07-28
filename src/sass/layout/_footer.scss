@@ -1,0 +1,7 @@
+.footer {
+  background-color: #202020;
+  padding: 13px 15px;
+  &__container {
+    @include flex(space-between, center);
+  }
+}

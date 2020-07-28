@@ -1,0 +1,108 @@
+.blog-card {
+  max-width: 480px * 2;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  @media (max-width: $media-PC1) {
+    width: 100%;
+  }
+  @media (max-width: $media-tablet) {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__description {
+    padding: 70px 50px;
+    background-color: $primary-color;
+    color: $snow-white-color;
+    max-width: 50%;
+    min-width: 275px;
+    position: relative;
+    text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-top: 35px solid transparent;
+      border-bottom: 35px solid transparent;
+      border-right: 28px solid $primary-color;
+      border-left: 0;
+      left: 1%;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+
+    @media (max-width: $media-tablet) {
+      max-width: 100%;
+
+    }
+  }
+
+  &__img {
+    max-width: 50%;
+    min-width: 275px;
+    width: 100%;
+    //height: 100%;
+    object-fit: cover;
+    object-position: center;
+    @media (max-width: $media-tablet) {
+      max-width: 100%;
+
+    }
+  }
+
+  &__sub-title {
+    padding: 0 0 32px;
+    display: block;
+    color: $snow-white-color;
+  }
+
+  &__title {
+    font: $font-second;
+    font-size: 1.74rem;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    position: relative;
+    color: $snow-white-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -24px;
+      width: 44px;
+      height: 4px;
+      background-color: $snow-white-color;
+    }
+  }
+
+  &__text {
+    font-size: 1.14rem;
+    margin-bottom: 55px;
+    color: $snow-white-color;
+  }
+
+  &__link {
+    font-style: $font-style;
+    font-size: 1.28rem;
+    color: $snow-white-color;
+    font-weight: $semi-bold;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--revers {
+    flex-direction: row-reverse;
+
+    .blog-card__description {
+      &:after {
+        left: 99%;
+        transform: translate(0%, -50%) scalex(-1);
+      }
+    }
+  }
+}

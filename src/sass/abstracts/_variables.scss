@@ -35,14 +35,15 @@ $font-second: $regular $font-size $font-family--second;
 //@media (max-width: 600px) {
 // flex-wrap: wrap;
 //}
+$delta: 50px;
 
-
-$media-phone: 400px - 100px;
-$media-tablet: 600px - 100px;
-$media-netbook: 800px - 100px;
-$media-notebook: 1024px - 100px;
-$media-PC1: 1400 - 100px;
-$media-PC2: 1920px - 100px;
+$media-phone: 400px - $delta;
+$media-tablet: 600px - $delta;
+$media-netbook: 800px - $delta;
+$media-notebook: 1024px - $delta;
+$media-PC1: 1400 - $delta;
+$media-PC2: 1920px - $delta;
+$media-TV: 2200px - $delta;
 .d {
   color: white;
 }

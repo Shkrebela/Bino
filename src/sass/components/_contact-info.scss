@@ -1,0 +1,33 @@
+.contact-info {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 100px 90px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: $snow-white-color;
+  @include flex(space-around, flex-start);
+  flex-direction: column;
+
+  &__title {
+    font: $font-second;
+    font-size: 1.714rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    font-size: 1.28rem;
+    margin-bottom: 70px;
+    color: $text-dark-color;
+  }
+
+  &__link {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+    color: $text-dark-color;
+    display: block;
+    margin: 0 5px 5px 0;
+  }
+}

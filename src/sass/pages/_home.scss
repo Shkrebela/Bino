@@ -39,7 +39,7 @@
     position: absolute;
     content: "";
     z-index: 5;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     border-top: 10vh solid transparent;
     border-right: 50vw solid #fff;
@@ -839,14 +839,12 @@
   &__member {
     @include flex(space-between, center);
     position: absolute;
-    max-width: 1920px;
+    max-width: 1170px;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 300px;
-    @media (max-width: $media-PC2) {
-      max-width: 1170px;
-    }
+
     @media (max-width: $media-PC1) {
       max-width: 900px;
     }
@@ -859,13 +857,28 @@
 }
 
 .collaboration {
-  padding: 140px 0;
+  padding: 140px $main-padding;
   background-color: $white-color;
   border-bottom: 1px solid #e6e7eb;
 
   &__box {
     @include flex(space-around, center);
     flex-wrap: wrap;
+  }
+
+  &__link {
+    max-width: 20%;
+    width: 100%;
+    padding: 0 5px 25px 0;
+    @media (max-width: $media-notebook) {
+      max-width: 25%;
+    }
+    @media (max-width: $media-netbook) {
+      max-width: 33.33%;
+    }
+    @media (max-width: $media-tablet) {
+      max-width: 50%;
+    }
   }
 }
 
@@ -873,12 +886,106 @@
   padding: 140px 0;
   background-color: $white-color;
   border-bottom: 1px solid #e6e7eb;
+  overflow: hidden;
 
   &__box {
-    @include flex(space-around, center);
+    @include flex(center, center);
     flex-wrap: wrap;
+  }
+
+  @media (max-width: $media-PC1) {
+    &__blog-card--1 {
+      order: 1;
+    }
+
+    &__blog-card--2 {
+      order: 3;
+    }
+
+    &__blog-card--3 {
+      order: 2;
+    }
+    &__blog-card--4 {
+      order: 4;
+    }
   }
 }
 
+.communication {
+  padding: 140px $main-padding;
+  background-color: $white-color;
+
+  &__box {
+    @include flex(center, center);
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  &__sub-box {
+    padding: 0 20px 20px 0;
+
+    &--1 {
+      max-width: 40%;
+    }
+
+    &--2 {
+      padding-right: 0;
+      max-width: 60%;
+    }
+
+    @media (max-width: $media-notebook) {
+      &--1 {
+        padding-right: 0;
+        max-width: 100%;
+      }
+      &--2 {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.suggestion {
+  padding: 140px $main-padding;
+  background-image: url("../../img/suggestion-background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__container {
+    text-align: center;
+    position: relative;
+  }
+
+  &__title, {
+    font-size: 2.57rem;
+    color: $snow-white-color;
+    font-weight: $regular;
+    margin-bottom: 15px;
+  }
+
+  &__select {
+    font-weight: $bold;
+    color: $snow-white-color;
+  }
+
+  &__text {
+    font-size: 1.28rem;
+    color: $snow-white-color;
+    margin-bottom: 70px;
+  }
+
+
+}
 
 

@@ -48,9 +48,9 @@
   }
 
   &--1 {
-    top: 110px;
-    @media (max-width: $media-PC2) {
-      top: 0;
+    top: 0;
+    @media (min-width: $media-TV) {
+      top: -20;
     }
     @media (max-width: $media-PC1) {
       top: -28px;
@@ -62,8 +62,8 @@
   }
 
   &--2 {
-    top: -16px;
-    @media (max-width: $media-PC2) {
+    top: -39px;
+    @media (min-width: $media-TV) {
       top: -39px;
     }
     @media (max-width: $media-PC1) {
@@ -75,8 +75,8 @@
   }
 
   &--3 {
-    top: -50px;
-    @media (max-width: $media-PC2) {
+    top: -40px;
+    @media (min-width: $media-TV) {
       top: -40px;
     }
     @media (max-width: $media-PC1) {
@@ -88,8 +88,8 @@
   }
 
   &--4 {
-    top: -6px;
-    @media (max-width: $media-PC2) {
+    top: 0;
+    @media (min-width: $media-TV) {
       top: 0;
     }
     @media (max-width: $media-PC1) {
@@ -101,9 +101,9 @@
   }
 
   &--5 {
-    top: -215px;
-    @media (max-width: $media-PC2) {
-      top: -25px;
+    top: -25px;
+    @media (min-width: $media-TV) {
+      top: 20px;
     }
     @media (max-width: $media-PC1) {
       top: -10px;
