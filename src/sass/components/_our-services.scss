@@ -1,0 +1,73 @@
+.our-services {
+  height: 100%;
+  @include flex(center, center);
+
+  &__description {
+    @include flex(center, flex-end);
+    flex-direction: column;
+    width: 50%;
+    padding: 50px 80px 50px 100px;
+    @media (max-width: $media-notebook) {
+      width: 100%;
+      padding-right: 150px;
+    }
+  }
+
+  &__sub-description {
+    text-align: right;
+    position: relative;
+    margin-bottom: 68px;
+  }
+
+  &__sub-title {
+    text-transform: uppercase;
+    margin-bottom: 19px;
+    color: $primary-color;
+    font-size: 1.286rem;
+  }
+
+  &__text {
+    max-width: 563px;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__icon-box {
+    @include flex(center, center);
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    right: -112px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background-color: $white-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      top: -5px;
+      left: -5px;
+      width: 74px;
+      height: 74px;
+      background-color: $white-color;
+      opacity: 0.25;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 100%;
+    fill: $primary-color;
+  }
+
+  &__image {
+    max-width: 50%;
+    height: 100%;
+    object-fit: cover;
+    @media (max-width: $media-notebook) {
+      display: none
+    }
+  }
+}

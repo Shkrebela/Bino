@@ -1,7 +1,10 @@
 .footer {
   background-color: #202020;
   padding: 13px 15px;
+  @include flex(center, center);
+
   &__container {
-    @include flex(space-between, center);
+    @include flex(space-around, center);
+    flex-wrap: wrap;
   }
 }

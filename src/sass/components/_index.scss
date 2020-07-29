@@ -1,0 +1,32 @@
+.index {
+  @include flex(center, center);
+  flex-direction: column;
+  margin: 30px;
+
+  &__circle {
+    @include flex(center, center);
+    width: 112px;
+    height: 112px;
+    border-radius: 100%;
+    border: 1px solid $white-color;
+    margin-bottom: 45px;
+  }
+
+  &__icon {
+    width: 31px;
+    fill: $white-color;
+  }
+
+  &__score {
+    font: $font-second;
+    font-weight: $bold;
+    font-size: 2.14rem;
+    color: $white-color;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    font: $font-second;
+    color: $white-color;
+  }
+}

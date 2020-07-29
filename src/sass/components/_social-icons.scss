@@ -1,5 +1,10 @@
 .social-icons {
-  display: inline-block;
+  @include flex(center, center);
+
+  &__link {
+    display: inline-block;
+  }
+
   &__item {
     width: 41px;
     height: 40px;

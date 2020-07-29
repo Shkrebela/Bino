@@ -1,0 +1,50 @@
+.primary-content {
+  color: $white-color;
+  text-align: center;
+  font-size: 1rem;
+  @media (max-width: $media-PC1) {
+    font-size: 0.6rem;
+  }
+  @media (max-width: $media-notebook) {
+    font-size: 0.5rem;
+  }
+  @media (max-width: $media-tablet) {
+    font-size: 0.4rem;
+  }
+
+  &__slogan-greeting {
+    font-size: 1.71em;
+    font-weight: 400;
+    color: $white-color;
+    margin-bottom: 1.8797em;
+  }
+
+  &__slogan-company {
+    font-size: 5.14em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white-color;
+    margin: 0 15px 0.632em;
+  }
+
+  &__separator {
+    width: 197px;
+    height: 7px;
+    margin-bottom: 3.214em;
+    fill: $white-color;
+  }
+
+  &__about-company {
+    max-width: 620px;
+    //padding: 0 30px;
+    color: $text-white-color;
+    margin: 0 30px 4.857em;
+    font-size: 1em;
+  }
+
+  &__link-box {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+}

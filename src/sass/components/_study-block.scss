@@ -1,0 +1,54 @@
+.study-block {
+  padding: 80px 61px 115px;
+  z-index: 1;
+  background-color: $snow-white-color;
+  @media (max-width: $media-netbook) {
+    padding: 80px 25px 115px
+  }
+
+  &__decoration {
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    background-color: $primary-color;
+    margin: 0 auto 60px;
+  }
+
+  &__icon-svg {
+    width: 40px;
+    height: 100%;
+    transform: rotate(-45deg);
+    fill: $snow-white-color;
+  }
+
+  &__title {
+    font: $font-first;
+    position: relative;
+    font-size: 1.286rem;
+    font-weight: $semi-bold;
+    color: $dark-color;
+    margin-bottom: 58px;
+
+    &::after {
+      content: "";
+      width: 41px;
+      height: 2px;
+      position: absolute;
+      bottom: -29px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $dark-color;
+    }
+  }
+
+  &__description {
+    margin-bottom: 46px;
+  }
+
+  &__link {
+    font-size: 0.85rem;
+    max-width: 145px;
+    margin: 0 auto;
+    height: 45px;
+  }
+}

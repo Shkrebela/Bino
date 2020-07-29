@@ -1,22 +1,33 @@
+@import 'abstracts/_variables.scss';
 
 @import 'base/_reset.scss';
-@import 'abstracts/_variables.scss';
 @import 'base/_typography.scss';
 
+@import 'components/_article.scss';
 @import 'components/_blog-card.scss';
 @import 'components/_buttons.scss';
 @import 'components/_carousel.scss';
 @import 'components/_company-card.scss';
 @import 'components/_contact-info.scss';
+@import 'components/_dynamic-block.scss';
+@import 'components/_extra-menu.scss';
 @import 'components/_form-info.scss';
+@import 'components/_index.scss';
 @import 'components/_logo.scss';
 @import 'components/_member-box.scss';
+@import 'components/_other.scss';
+@import 'components/_our-services.scss';
 @import 'components/_pop-up.scss';
+@import 'components/_price-card.scss';
+@import 'components/_primary-content.scss';
+@import 'components/_project-card.scss';
 @import 'components/_separator.scss';
 @import 'components/_social-icons.scss';
-@import 'components/_other.scss';
+@import 'components/_study-block.scss';
+@import 'components/_title.scss';
 //@import 'components/slider';
-@import 'base/_typography.scss';
+
+
 //@import 'layout/navigation';
 //@import 'layout/grid';
 @import 'layout/_header.scss';
@@ -24,6 +35,7 @@
 //@import 'layout/footer';
 //@import 'layout/sidebar';
 //@import 'layout/forms';
+
 @import 'vendors/_swiper.scss';
 
 @import 'pages/_home.scss';
