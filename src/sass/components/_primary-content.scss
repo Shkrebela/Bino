@@ -3,13 +3,25 @@
   text-align: center;
   font-size: 1rem;
   @media (max-width: $media-PC1) {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    .primary-content__about-company {
+      font-size: 1.1em;
+      margin: 3.857em;
+    }
   }
   @media (max-width: $media-notebook) {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    .primary-content__about-company {
+      font-size: 1.2em;
+      margin: 2.857em;
+    }
   }
   @media (max-width: $media-tablet) {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
+    .primary-content__about-company {
+      font-size: 1.3em;
+      margin: 1.857em;
+    }
   }
 
   &__slogan-greeting {
@@ -27,24 +39,16 @@
     margin: 0 15px 0.632em;
   }
 
-  &__separator {
-    width: 197px;
-    height: 7px;
-    margin-bottom: 3.214em;
-    fill: $white-color;
-  }
-
   &__about-company {
     max-width: 620px;
-    //padding: 0 30px;
     color: $text-white-color;
-    margin: 0 30px 4.857em;
+    margin: 0 50px 4.857em;
     font-size: 1em;
   }
 
   &__link-box {
     @include flex(center, center);
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 1em;
   }
 }

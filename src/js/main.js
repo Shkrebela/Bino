@@ -51,6 +51,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 Array.from(menuLink).forEach(i => {
+
     i.addEventListener('click', () => {
         toggleClass(menuToggle, 'menu-toggle--active-menu-toggle');
         toggleClass(menu, 'main-header__menu--active-menu-toggle');

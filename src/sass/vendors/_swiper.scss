@@ -33,14 +33,18 @@
     border-radius: 2px;
     background-color: rgb(119 119 119 / 60%);
     color: $white-color;
-    @media (max-width: $media-tablet) {
+    transition: all .3s ease-in-out;
+    @media (max-width: $media-netbook) {
       background-color: transparent;
     }
 
     &:hover {
-      background-color: #e74e3e;
+      background-color: $primary-color;
       color: $white-color;
-
+      @media (max-width: $media-netbook) {
+        background-color: transparent;
+        color: $primary-color;
+      }
       &::after {
         opacity: 1;
       }

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="logo" viewBox="0 0 141 52">
+<defs>
+  <clipPath id="ownia">
+   <path id="svg_1" d="m41.954,0l99.046,0l0,51.999l-99.046,0l0,-51.999z" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_8">
+   <path id="svg_2" d="m0,0l51.676,0l0,51.999l-51.676,0l0,-51.999z" fill="#f4f5f9"/>
+   <path id="svg_3" clip-path="url(&quot;#ownia&quot;)" d="m41.954,0l0,0l99.046,0l0,51.999l-99.046,0l0,0l0,-51.999z" stroke-width="6" stroke-miterlimit="20" stroke="#f4f5f9" fill="none"/>
+   <text id="svg_4" x="10" y="40.105241" font-weight="700" font-size="41.54" font-family="'Open Sans','OpenSans-Bold'" fill="#4a4c55">
+    <tspan id="svg_5">B</tspan>
+   </text>
+   <text id="svg_6" x="56.578947" y="40.105241" font-weight="400" font-size="41.54" font-family="'Open Sans','OpenSans-Light'" fill="#f1ebe7">
+    <tspan id="svg_7">INO</tspan>
+   </text>
+  </g>
+ </g>
+</symbol>
+</svg>
+<!-- viewBox="0 0 22 31" -->

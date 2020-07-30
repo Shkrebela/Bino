@@ -1,0 +1,11 @@
+.separator {
+    @extend %color-svg;
+    margin-bottom: 68px;
+    max-width: 195px;
+    height: 7px;
+    &--adaptive {
+        max-width: 14em;
+        height: 0.5em;
+        margin-bottom: 3.214em;
+    }
+}
