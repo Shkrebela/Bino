@@ -17,7 +17,7 @@ swiperSecond = new Swiper('.about-company__swiper-container', {
     direction: 'vertical',
     slidesPerView: 1,
     spaceBetween: 30,
-    mousewheel: false,
+    mousewheel: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -64,8 +64,33 @@ function toggleClass(el, className) {
     el.classList.toggle(className);
 }
 
+//tabs
+let tab = function () {
+    let tabNav = document.querySelectorAll('.extra-menu__link'),
+        tabContent = document.querySelectorAll('.portfolio__sub-box'),
+        tabName;
 
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
 
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('active-tab');
+        });
+        this.classList.add('active-tab');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('active-tab') : item.classList.remove('active-tab');
+        })
+    }
+};
+
+tab();
 
 
 

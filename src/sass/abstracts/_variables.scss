@@ -1,5 +1,4 @@
-//variables of fonts
-
+//fonts
 $font-family--first: 'Open Sans', sans-serif;
 $font-family--second: 'Source Sans Pro', sans-serif;
 $font-size: 14px;
@@ -7,57 +6,36 @@ $bold: 700;
 $regular: 400;
 $semi-bold: 600;
 $font-style: italic;
-
-//%font-first { font: $regular $font-size $font-family--first }
-//%font-second { font: $regular $font-size $font-family--second }
 $font-first: $regular $font-size $font-family--first;
 $font-second: $regular $font-size $font-family--second;
-//$font-first--regular: $regular $font-size $font-family-first;
-//$font-first--bold: $bold $font-size $font-family-first;
-//$font-first--semi-bold: $semi-bold $font-size $font-family-first;
-//$font-first--semi-bold-italic: $font-style $semi-bold $font-size $font-family-first;
-//$font-second--regular: $regular $font-size $font-family-second;
-//$font-second--bold: $bold $font-size $font-family-second;
-//$font-second--semi-bold: $semi-bold $font-size $font-family-second;
 
-@mixin flex($row, $column) {
-  display: flex;
-  justify-content: $row;
-  align-items: $column;
-}
-
-.container {
-  max-width: 1170px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-//@media (max-width: 600px) {
-// flex-wrap: wrap;
-//}
-$delta: 50px;
-
+//media points
+$delta: 30px;
 $media-phone: 400px - $delta;
 $media-tablet: 600px - $delta;
 $media-netbook: 800px - $delta;
 $media-notebook: 1024px - $delta;
-$media-PC1: 1400 - $delta;
+$media-PC0: 1366px - $delta;
+$media-PC1: 1400px - $delta;
 $media-PC2: 1920px - $delta;
 $media-TV: 2200px - $delta;
-.d {
-  color: white;
+@mixin media($media-TV-item, $media-PC1-item) {
+  @media (min-width: $media-TV) {
+    top: $media-TV-item;
+  }
+  @media (max-width: $media-PC1) {
+    top: $media-PC1-item;
+  }
 }
-
-$main-padding: 15px;
-
 
 //color
 $primary-color: #e74c3c;
-$primary-color-transparent: rgba(231, 76, 60, 0.8);
+$primary-color-transparent: rgba(231, 76, 60, .8);
 $primary-hover-color: lighten(#e74e3e, 5%);
-//$primary-hover-color: #e74e3e;
 $dark-color: #6a6a6a;
+$dark-color-transparent: rgba(106, 106, 106, 0.3);
 $white-color: #f4f5f9;
+$white-color-transparent: rgba(244, 245, 249, 0.25);
 $text-white-color: #cbc6c0;
 $text-dark-color: #999999;
 $additional-dark-color: #202020;
@@ -67,7 +45,14 @@ $snow-white-color: #fff;
   --color-circle: #e74c3c;
   --color-line: #999999;
 }
-:root {
-  --color-circle: #e74c3c;
-  --color-line: #999999;
+
+//other
+@mixin flex($row, $column) {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
 }
+
+
+
+

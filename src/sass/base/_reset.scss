@@ -47,11 +47,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-//img {
-//  max-width: 100%;
-//  display: block;
-//}
-
 input,
 button,
 textarea,
@@ -62,6 +57,7 @@ select {
   }
 }
 
+//Remove all animations and transitions for people who prefer not to use them
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -71,10 +67,6 @@ select {
   }
 }
 
-*:hover {
-  transition: .3s ease-in-out;
-}
 html  {
   scroll-behavior: smooth;
 }
-

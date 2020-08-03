@@ -1,0 +1,27 @@
+.portfolio {
+  &__container {
+    padding: 0 $main-padding;
+  }
+
+  &__box {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    max-lines: 1;
+  }
+
+  &__sub-box.active-tab {
+    display: block;
+  }
+
+  &__sub-box {
+    width: 25%;
+    display: none;
+
+    @media (max-width: $media-notebook) {
+      width: 50%;
+    }
+    @media (max-width: $media-tablet) {
+      width: 100%;
+    }
+  }
+}

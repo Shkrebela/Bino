@@ -1,46 +1,46 @@
 @import 'abstracts/_variables.scss';
 
+@import 'base/_fonts.scss';
 @import 'base/_reset.scss';
 @import 'base/_typography.scss';
+
+@import 'vendors/_swiper.scss';
 
 @import 'components/_article.scss';
 @import 'components/_blog-card.scss';
 @import 'components/_buttons.scss';
-@import 'components/_carousel.scss';
 @import 'components/_company-card.scss';
 @import 'components/_contact-info.scss';
+@import 'components/_contanir-saction.scss';
 @import 'components/_dynamic-block.scss';
 @import 'components/_extra-menu.scss';
 @import 'components/_form-info.scss';
-@import 'components/_index.scss';
+@import 'components/_input.scss';
 @import 'components/_logo.scss';
 @import 'components/_member-box.scss';
 @import 'components/_other.scss';
 @import 'components/_our-services.scss';
-@import 'components/_pop-up.scss';
 @import 'components/_price-card.scss';
 @import 'components/_primary-content.scss';
 @import 'components/_project-card.scss';
+@import 'components/_score-mark.scss';
 @import 'components/_separator.scss';
 @import 'components/_social-icons.scss';
 @import 'components/_study-block.scss';
 @import 'components/_title.scss';
-//@import 'components/slider';
 
-
-//@import 'layout/navigation';
-//@import 'layout/grid';
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
-//@import 'layout/footer';
-//@import 'layout/sidebar';
-//@import 'layout/forms';
-
-@import 'vendors/_swiper.scss';
-
-@import 'pages/_home.scss';
-//@import 'pages/about';
-//@import 'pages/contact';
-//
-//@import 'themes/theme';
-//@import 'themes/admin';
+@import 'layout/sections/_primary-screen.scss';
+@import 'layout/sections/_advantages.scss';
+@import 'layout/sections/_history.scss';
+@import 'layout/sections/_about-company.scss';
+@import 'layout/sections/_portfolio.scss';
+@import 'layout/sections/_case-study.scss';
+@import 'layout/sections/_counter.scss';
+@import 'layout/sections/_pricing.scss';
+@import 'layout/sections/_team.scss';
+@import 'layout/sections/_collaboration.scss';
+@import 'layout/sections/_blog.scss';
+@import 'layout/sections/_communication.scss';
+@import 'layout/sections/_suggestion.scss';

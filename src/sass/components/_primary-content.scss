@@ -4,24 +4,12 @@
   font-size: 1rem;
   @media (max-width: $media-PC1) {
     font-size: 0.7rem;
-    .primary-content__about-company {
-      font-size: 1.1em;
-      margin: 3.857em;
-    }
   }
   @media (max-width: $media-notebook) {
     font-size: 0.6rem;
-    .primary-content__about-company {
-      font-size: 1.2em;
-      margin: 2.857em;
-    }
   }
   @media (max-width: $media-tablet) {
     font-size: 0.5rem;
-    .primary-content__about-company {
-      font-size: 1.3em;
-      margin: 1.857em;
-    }
   }
 
   &__slogan-greeting {
@@ -37,13 +25,34 @@
     text-transform: uppercase;
     color: $white-color;
     margin: 0 15px 0.632em;
+    @media (max-width: $media-PC1) {
+        font-size: 5.14em;
+    }
+    @media (max-width: $media-notebook) {
+        font-size: 4.14em;
+    }
+    @media (max-width: $media-tablet) {
+        font-size: 4.14em;
+    }
   }
 
   &__about-company {
     max-width: 620px;
     color: $text-white-color;
     margin: 0 50px 4.857em;
-    font-size: 1em;
+    font-size: 1rem;
+    @media (max-width: $media-PC1) {
+        font-size: 1rem;
+        margin-bottom: 1.857em;
+    }
+    @media (max-width: $media-notebook) {
+        font-size: 0.85rem;
+        margin-bottom: 1.857em;
+    }
+    @media (max-width: $media-tablet) {
+        font-size: 0.85rem;
+        margin-bottom: 1.857em;
+    }
   }
 
   &__link-box {

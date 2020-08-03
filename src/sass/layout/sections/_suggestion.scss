@@ -1,0 +1,39 @@
+.suggestion {
+  background-image: url("../../../img/suggestion-background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__container {
+    text-align: center;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 2.57rem;
+    color: $snow-white-color;
+    font-weight: $regular;
+    margin-bottom: 15px;
+  }
+
+  &__select {
+    font-weight: $bold;
+    color: $snow-white-color;
+  }
+
+  &__text {
+    font-size: 1.28rem;
+    color: $snow-white-color;
+    margin-bottom: 70px;
+  }
+}

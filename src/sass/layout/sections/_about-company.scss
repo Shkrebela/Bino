@@ -1,0 +1,52 @@
+.about-company {
+  background-color: $additional-dark-color;
+
+  &__container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    @include flex(center, stretch);
+  }
+
+  &__swiper-container {
+    margin-right: -35px;
+    height: 500px;
+    @media (max-width: $media-notebook) {
+      margin: 0;
+    }
+    @media (max-width: $media-tablet) {
+      height: 600px;
+    }
+    @media (max-width: $media-phone) {
+      height: 700px;
+    }
+  }
+
+  &__title {
+    margin-right: 81px;
+  }
+
+  &__box {
+    width: 50%;
+    height: 100%;
+    padding: 50px 0 50px 0;
+    @media (max-width: $media-notebook) {
+      width: 100%;
+      padding-right: 50px;
+    }
+    @media (max-width: $media-tablet) {
+      padding-right: 15px;
+    }
+  }
+
+  &__image-box {
+    width: 50%;
+    background-image: url("../../../img/photo-about-company.jpg");
+    background-size: cover;
+    background-position: left;
+    @media (max-width: $media-notebook) {
+      display: none;
+    }
+  }
+}

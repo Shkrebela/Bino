@@ -3,10 +3,11 @@
   width: 100%;
   position: relative;
 
-  &:hover {
+  &--select {
     .price-card__header {
       background-color: $primary-color;
     }
+
     .price-card__price {
       color: $primary-color;
     }
@@ -17,6 +18,9 @@
     background-color: $text-dark-color;
     position: relative;
     text-align: center;
+    @media (max-width: $media-PC1) {
+      padding: 35px 50px 110px;
+    }
   }
 
   &__title {
@@ -66,13 +70,15 @@
     font: $font-second;
     font-size: 0.928rem;
     z-index: 1;
-
   }
 
   &__body {
     padding: 125px 80px 50px;
     background-color: $white-color;
     text-align: center;
+    @media (max-width: $media-PC1) {
+      padding: 100px 50px 30px;
+    }
   }
 
   &__description {

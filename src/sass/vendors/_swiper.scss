@@ -36,6 +36,7 @@
     transition: all .3s ease-in-out;
     @media (max-width: $media-netbook) {
       background-color: transparent;
+      width: 15px;
     }
 
     &:hover {
@@ -66,7 +67,7 @@
 
   &--left {
     width: 50px;
-    left: 25px;
+    left: 0;
     right: unset;
 
     .swiper-pagination-bullet {

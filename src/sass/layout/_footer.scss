@@ -4,7 +4,10 @@
   @include flex(center, center);
 
   &__container {
-    @include flex(space-around, center);
+    @include flex(space-between, center);
     flex-wrap: wrap;
+    @media (max-width: $media-tablet) {
+      @include flex(space-around, center);
+    }
   }
 }

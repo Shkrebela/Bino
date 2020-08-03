@@ -18,6 +18,7 @@
     color: #f4f5f9;
     max-width: 650px;
     width: 100%;
+    transition: left .3s ease-in-out;
 
     @media (max-width: $media-netbook) {
       position: absolute;
@@ -65,9 +66,21 @@
     font-weight: $semi-bold;
     color: $dark-color;
     margin-bottom: 29px;
+    @media (max-width: $media-PC1) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $media-netbook) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     margin-bottom: 28px;
+    @media (max-width: $media-PC1) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $media-netbook) {
+      margin-bottom: 15px;
+    }
   }
 }
