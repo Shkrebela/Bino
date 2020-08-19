@@ -1,36 +1,41 @@
 # Lending Bino
-This project made for portfolio and isn't commercial project. 
+This project made for a portfolio and isn't commercial project.<br> 
 Template for project was take on [this link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
 
-![alt text](https://www.dropbox.com/s/7kuifrrnixkjhat/ezgif.com-video-to-gif.gif?dl=1)
+![alt text](https://github.com/Shkrebela/TEST/blob/master/ezgif.com-resize%20(1).gif?raw=true)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for assessment skills.
 
 ### Prerequisites
-Before installing project on your location machine must be intalled node.js and npm .
-If you haven't a such softvare you must install. For install you can folowing [this link](https://nodejs.org/uk/download/package-manager/)
+Before installing project on your location machine must be installed node.js and npm.<br>
+If you haven't a such software you must install. For install you can follow [this link](https://nodejs.org/uk/download/package-manager/)
 
 ### Installing
-For installing project need clone repository in you location folder and install npm packet then run local server whit this project. 
+For installing project need clone repository in your location folder and install npm packet then run local server whit this project. 
 
-**First step** 
+**First step**<br> 
 This step for clone project of repository to location folder
 ```
 git clone git@github.com:Shkrebela/Bino.git
 ```
-**Second step** 
-This step for install all npm package and plugin which point in packej.jeson
+**Second step**<br> 
+This step for enter the project folder
+```
+cd Bino/
+```
+**Third step**<br> 
+This step for install all npm package and plugin which point in package.json
 ```
 npm install
 ```
-**Third step** 
-This step for created local server for running project
+**Forth step**<br>
+This step for created a local server for running project
 ```
 npm run hot 
 ```
-**Forth step**
-Open this link http://localhost:8888 in your browser
+**Fifth step**<br>
+Open this link http://localhost:8080 in your browser
 
 ## Built With
 
@@ -40,7 +45,7 @@ Open this link http://localhost:8888 in your browser
 * Bundler - WebPack
 * Bundler - Laravel Mix
 * Task Runner - Gulp
-* Bootstrup framework
+* Bootstrap framework
 * Library - Swiper (slider)
 
 ## Author
