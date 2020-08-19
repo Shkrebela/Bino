@@ -1,9 +1,6 @@
 # Lending Bino
 This project made for portfolio and isn't commercial project. 
 Template for project was take on [this link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
-
-![alt text](https://www.dropbox.com/s/7kuifrrnixkjhat/ezgif.com-video-to-gif.gif?dl=1)
-
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for assessment skills.
 
