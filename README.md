@@ -30,8 +30,10 @@ This step for install all npm package and plugin which point in package.json
 npm install
 ```
 **Forth step**<br>
-This step for created a local server for running project
+This step for created folder dist, and a local server for running project
 ```
+npm run dev 
+
 npm run hot 
 ```
 **Fifth step**<br>
