@@ -44,10 +44,7 @@ Open this link http://localhost:8080 in your browser
 * HTML 5, CSS 3
 * SCSS preprocessor
 * BEM methodology
-* Bundler - WebPack
 * Bundler - Laravel Mix
-* Task Runner - Gulp
-* Bootstrap framework
 * Library - Swiper (slider)
 
 ## Author
