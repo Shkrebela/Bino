@@ -1,72 +1,86 @@
 .main-header {
   position: fixed;
   width: 100%;
-  padding: 15px;
-  background-color: rgba(58, 62, 100, 0.85);
+  padding: 5px 15px;
+  background-color: rgba(83, 83, 83, 0.40);
+  z-index: 100;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 
-  .main-header_container {
+  &__container {
     @extend .container;
     @include flex(space-between, center);
+  }
 
-    .logo_img {
-      width: 141px * 0.8;
-      height: 52px * 0.8;
-      margin-right: 20px;
+  &__menu {
+    @include flex(space-between, center);
+    font: $font-first;
+    text-transform: uppercase;
+    color: $third-color;
+    max-width: 650px;
+    width: 100%;
+    transition: left .3s ease-in-out;
+
+    @media (max-width: $media-md) {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: $additional-dark-color-transparent;
+      flex-direction: column;
+      padding: 10% 0 15% 0;
+      max-width: 100%;
+      width: 100vw;
+      height: 100vh;
     }
 
-    .main-header__menu {
-      @include flex(space-between, center);
-      font: $font-first;
-      text-transform: uppercase;
-      color: #f4f5f9;
-      max-width: 650px;
-      width: 100%;
-      @media (max-width: $media-tablet) {
-        position: absolute;
-        top:0;
-        left: 100vw;
-        background-color: rgba(36, 36, 36, 0.94);
-        flex-direction: column;
-        padding: 5% 0 10% 0;
-        width: 100vw;
-        height: 100vh;
-        transition: .3s ease-in-out;
-      }
-      .main-header__link {
-        @include flex(center, center);
-        white-space: nowrap;
-        padding: 20px 5px;
+    &--active-menu-toggle {
+      left: 0;
+    }
+  }
+
+  &__link {
+    @include flex(center, center);
+    white-space: nowrap;
+    padding: 20px 5px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    color: $third-color;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: $primary-color--hover;
+      border-bottom: 1px solid $primary-color--hover;
+      @media (max-width: $media-md) {
         border-bottom: 1px solid transparent;
-        cursor: pointer;
-
-        &:hover {
-          color: #e74c3c;
-          border-bottom: 1px solid #e74c3c;
-          transition: 0.3s;
-          @media (max-width: $media-tablet) {
-            border-bottom: 1px solid transparent;
-          }
-        }
-      }
-      &.js-menu-toggle_active {
-        left: 0;
       }
     }
-    .js-menu-toggle {
-      display: none;
-      cursor: pointer;
-      @media (max-width: $media-tablet) {
-        display: block;
-      }
-      }
   }
 }
 
+.section-header {
+  text-align: center;
 
+  &__title {
+    font: $font-second;
+    text-transform: uppercase;
+    font-size: 2.57rem;
+    font-weight: 600;
+    color: $second-color;
+    margin-bottom: 29px;
+    @media (max-width: $media-xl) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $media-md) {
+      margin-bottom: 15px;
+    }
+  }
 
-
-
-
-
-
-
+  &__text {
+    margin-bottom: 28px;
+    @media (max-width: $media-xl) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $media-md) {
+      margin-bottom: 15px;
+    }
+  }
+}

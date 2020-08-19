@@ -1,0 +1,32 @@
+.score-mark {
+  @include flex(center, center);
+  flex-direction: column;
+  margin: 30px;
+
+  &__circle {
+    @include flex(center, center);
+    width: 112px;
+    height: 112px;
+    border-radius: 100%;
+    border: 1px solid $third-color;
+    margin-bottom: 45px;
+  }
+
+  &__icon {
+    width: 31px;
+    fill: $third-color;
+  }
+
+  &__score {
+    font: $font-second;
+    font-weight: 700;
+    font-size: 2.14rem;
+    color: $third-color;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    font: $font-second;
+    color: $third-color;
+  }
+}

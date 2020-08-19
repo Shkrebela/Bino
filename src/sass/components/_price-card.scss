@@ -1,0 +1,89 @@
+.price-card {
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+
+  &--select {
+    .price-card__header {
+      background-color: $primary-color;
+    }
+
+    .price-card__price {
+      color: $primary-color;
+    }
+  }
+
+  &__header {
+    padding: 50px 80px 136px;
+    background-color: $text-color--dark;
+    position: relative;
+    text-align: center;
+    @media (max-width: $media-xl) {
+      padding: 35px 50px 110px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    color: $third-color;
+    font-size: 1.714rem;
+    text-transform: uppercase;
+  }
+
+  &__circle {
+    @include flex(center, center);
+    flex-direction: column;
+    width: 154px;
+    height: 154px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    text-transform: none;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: $text-color--dark;
+
+    &::after {
+      content: "";
+      width: 174px;
+      height: 174px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      background-color: white;
+      opacity: 0.25;
+      z-index: 0;
+    }
+  }
+
+  &__price {
+    font: $font-second;
+    font-size: 2.857rem;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+  &__time {
+    font: $font-second;
+    font-size: 0.928rem;
+    z-index: 1;
+  }
+
+  &__body {
+    padding: 125px 80px 50px;
+    background-color: $third-color;
+    text-align: center;
+    @media (max-width: $media-xl) {
+      padding: 100px 50px 30px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 48px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+}

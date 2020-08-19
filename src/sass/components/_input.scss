@@ -1,0 +1,48 @@
+.input-form {
+  position: relative;
+  width: 100%;
+  color: $text-color--dark;
+
+  &__input,
+  &__textarea {
+    font-weight: 600;
+    color: $text-color--dark;
+    margin-bottom: 10px;
+    padding: 0 7px;
+    border: 0;
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 1px solid $text-color--dark;
+    transition: .3s ease-in-out;
+    &:focus {
+      border-bottom: 1px solid $primary-color;
+    }
+
+    &::placeholder {
+      color: $text-color--dark;
+      transition: .3s ease-in-out;
+    }
+
+    &:focus::placeholder {
+      position: relative;
+      font-size: 0.71rem;
+      transform: translate(0, -140%);
+      color: $primary-color;
+    }
+  }
+
+  &__textarea {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    min-height: 130px;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    transition: .3s ease-in-out;
+    display: none;
+  }
+}

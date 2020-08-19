@@ -1,0 +1,32 @@
+.communication {
+  background-color: $third-color;
+
+  &__box {
+    @include flex(center, center);
+    align-items: stretch;
+  }
+
+  &__sub-box {
+    padding: 0 20px 20px 0;
+
+    &--small {
+      width: 40%;
+    }
+
+    &--big {
+      padding-right: 0;
+      width: 60%;
+    }
+
+    @media (max-width: $media-md) {
+      &--small {
+        padding-right: 0;
+        width: 100%;
+      }
+
+      &--big {
+        width: 100%;
+      }
+    }
+  }
+}

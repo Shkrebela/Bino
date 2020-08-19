@@ -1,0 +1,39 @@
+.primary-content {
+  color: $third-color;
+  text-align: center;
+  padding: 0 50px;
+  font-size: 1rem;
+  @include media-xl-lg-md-sm(font-size, 0.7rem, 0.6rem, 0.6rem, 0.5rem);
+
+  &__slogan-greeting {
+    font-size: 1.71em;
+    font-weight: 400;
+    color: $third-color;
+    margin-bottom: 1.8797em;
+  }
+
+  &__slogan-company {
+    font-size: 5.14em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $third-color;
+    margin: 0 auto 0.632em;
+    @include media-xl-lg(font-size, 5.14em, 4.14em);
+  }
+
+  &__about-company {
+    max-width: 620px;
+    color: $text-color--dark;
+    margin: 0 auto 4.857em;
+    font-size: 1rem;
+    @media (max-width: $media-xl) {
+      margin-bottom: 1.857em
+    }
+  }
+
+  &__link-box {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    padding: 1em;
+  }
+}

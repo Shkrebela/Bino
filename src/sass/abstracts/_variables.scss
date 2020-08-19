@@ -1,46 +1,41 @@
-
-
-//variables of fonts
-
+//fonts
 $font-family--first: 'Open Sans', sans-serif;
 $font-family--second: 'Source Sans Pro', sans-serif;
 $font-size: 14px;
-$bold: 700;
-$regular: 400;
-$semi-bold: 600;
-$font-style: italic;
 
-//%font-first { font: $regular $font-size $font-family--first }
-//%font-second { font: $regular $font-size $font-family--second }
-$font-first: $regular $font-size $font-family--first;
-$font-second: $regular $font-size $font-family--second;
-  //$font-first--regular: $regular $font-size $font-family-first;
-  //$font-first--bold: $bold $font-size $font-family-first;
-  //$font-first--semi-bold: $semi-bold $font-size $font-family-first;
-  //$font-first--semi-bold-italic: $font-style $semi-bold $font-size $font-family-first;
-  //$font-second--regular: $regular $font-size $font-family-second;
-  //$font-second--bold: $bold $font-size $font-family-second;
-  //$font-second--semi-bold: $semi-bold $font-size $font-family-second;
+$font-first: 400 1rem $font-family--first;
+$font-second: 400 1rem $font-family--second;
 
-  @mixin flex($row, $column) {
-    display: flex;
-    justify-content: $row;
-    align-items: $column;
-  }
+//media points
+$media-sm: 576px;
+$media-md: 768px;
+$media-lg: 992px;
+$media-xl: 1400px;
+$media-xxl: 2200px;
 
-  .container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-  }
+//colors
+$primary-color: #e74c3c;
+$primary-color--transparent: rgba(231, 76, 60, .8);
+$primary-color--hover: lighten(#e74e3e, 5%);
 
-   //@media (max-width: 600px) {
-   // flex-wrap: wrap;
-   //}
+$second-color: #6a6a6a;
+$second-color--transparent: rgba(106, 106, 106, 0.3);
+
+$third-color: #f4f5f9;
+$third-color--transparent: rgba(244, 245, 249, 0.25);
+
+$text-color--dark: #999999;
+
+$background-dark-color: #202020;
+$additional-dark-color-transparent: rgba(32, 32, 32, 0.9);
+
+%color-svg {
+  --color-circle: #e74c3c;
+  --color-line: #999999;
+}
 
 
-$media-phone: 400px;
-$media-tablet: 600px;
-//$media-netbook: 600px;
-$media-notebook: 1024px;
-$media-PC: 1920px;
+
+
+
+

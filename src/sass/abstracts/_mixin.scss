@@ -1,0 +1,40 @@
+@import '../abstracts/_variables.scss';
+
+@mixin flex($row, $column) {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
+}
+
+@mixin media-xl-xxl($parameter, $value-1, $value-2) {
+  @media (min-width: $media-xl) {
+    #{$parameter}: $value-1
+  }
+  @media (max-width: $media-xxl) {
+    #{$parameter}: $value-1
+  }
+}
+
+@mixin media-xl-lg($parameter, $value-1, $value-2) {
+  @media (max-width: $media-xl) {
+    #{$parameter}: $value-1
+  }
+  @media (max-width: $media-lg) {
+    #{$parameter}: $value-2
+  }
+}
+
+@mixin media-xl-lg-md-sm($parameter, $value-1, $value-2, $value-3, $value-4) {
+  @media (max-width: $media-xl) {
+    #{$parameter}: $value-1
+  }
+  @media (max-width: $media-lg) {
+    #{$parameter}: $value-2
+  }
+  @media (max-width: $media-md) {
+    #{$parameter}: $value-3
+  }
+  @media (max-width: $media-sm) {
+    #{$parameter}: $value-4
+  }
+}

@@ -1,0 +1,137 @@
+.blog-card {
+  $this: &;
+  max-width: 100%;
+  display: flex;
+  position: relative;
+
+  @media (max-width: $media-sm) {
+    flex-wrap: wrap;
+  }
+
+  &:hover {
+    #{$this}__description {
+      &::after {
+        opacity: 1;
+      }
+      @media (max-width: $media-sm) {
+        max-width: unset;
+        height: unset;
+        margin-top: unset;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 50%;
+    padding: 70px 50px;
+    background-color: $primary-color;
+    color: white;
+    position: relative;
+    text-align: left;
+    transition: .3s ease-in-out;
+    @media (max-width: $media-xl) {
+      padding: 50px 30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-top: 35px solid transparent;
+      border-bottom: 35px solid transparent;
+      border-right: 28px solid $primary-color;
+      border-left: 0;
+      left: 1%;
+      top: 50%;
+      opacity: 0;
+      transform: translate(-100%, -50%);
+      transition: .3s ease-in-out;
+      @media (max-width: $media-sm) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $media-sm) {
+      max-width: 100%;
+      height: 200px;
+      margin-top: -200px;
+      background-color: transparent;
+      overflow: hidden;
+    }
+  }
+
+  &__img-link {
+    width: 50%;
+    @media (max-width: $media-sm) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__sub-title {
+    padding: 0 0 32px;
+    display: block;
+    color: white;
+  }
+
+  &__title {
+    font: $font-second;
+    font-size: 1.74rem;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    position: relative;
+    color: white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -24px;
+      width: 44px;
+      height: 4px;
+      background-color: white;
+    }
+  }
+
+  &__link-title {
+    font: inherit;
+    text-transform: inherit;
+    color: inherit;
+  }
+
+  &__text {
+    font-size: 1.14rem;
+    margin-bottom: 55px;
+    color: white;
+  }
+
+  &__link {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.28rem;
+    color: white;
+    cursor: pointer;
+    padding: 15px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--revers {
+    flex-direction: row-reverse;
+
+    #{$this}__description {
+      &:after {
+        left: 99%;
+        transform: translate(0%, -50%) scalex(-1);
+      }
+    }
+  }
+}

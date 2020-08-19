@@ -1,13 +1,42 @@
-/*mobile button menu*/
+.menu-toggle {
+  $this: &;
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  padding: 15px 5px;
+  z-index: 150;
+  @media (max-width: $media-md) {
+    display: block;
+  }
 
-  .js-menu-toggle__line {
+  &--active-menu-toggle {
+    #{$this}__line {
+
+      &::before {
+        top: 0;
+        left: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg);
+      }
+
+      width: 0;
+      background-color: $primary-color;
+    }
+  }
+
+  &__line {
     position: relative;
     display: block;
     width: 25px;
     height: 2px;
-    background-color: #f4f5f9;
+    background-color: $third-color;
     transition: 0s;
-
 
     &::before, &::after {
       content: "";
@@ -17,23 +46,151 @@
       height: 2px;
       background-color: inherit;
       transition: all .3s ease-in-out;
+    }
 
+    &::before {
+      top: -8px
     }
-    &::before { top: -8px }
-    &::after { top: 8px }
 
-    .js-menu-toggle_active &::before {
-      top: 0;
-      transform: rotate(-45deg);
-    }
-    .js-menu-toggle_active &::after {
-      top: 0;
-      transform: rotate(45deg);
-    }
-    .js-menu-toggle_active & {
-      width: 0;
-      background-color: #e74c3c;
+    &::after {
+      top: 8px
     }
   }
+}
 
+.button {
+  @include flex(center, center);
+  max-width: 225px;
+  width: 100%;
+  min-height: 56px;
+  border: 1px solid $primary-color;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  margin: 0 15px 15px;
+  font: $font-first;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  background-color: $primary-color;
+  cursor: pointer;
+  transition: .3s ease-in-out;
 
+  &:hover {
+    background-color: $primary-color--hover;
+    border: 1px solid $primary-color--hover;
+  }
+
+  &--indent-right {
+    margin: 0 15px 15px 0;
+  }
+
+  &--indent-auto {
+    margin: 0 auto;
+  }
+
+  &--indent-two-button {
+    margin: 0 15px;
+  }
+
+  &--grey {
+    background-color: $text-color--dark;
+    border: 1px solid $text-color--dark;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $third-color;
+    border: 1px solid $third-color;
+  }
+
+  &--adaptive {
+    max-width: 16em;
+    min-height: 4em;
+    margin: 0 15px 15px;
+    font-size: 1rem;
+    @media (max-width: $media-sm) {
+      max-width: 12em;
+      min-height: 3em;
+      font-size: 0.857rem;
+    }
+    @media (max-width: $media-xl) {
+      max-width: 14em;
+      min-height: 4em;
+      font-size: 0.857rem;
+    }
+  }
+}
+
+.arrow-down {
+  $this: &;
+  @include flex(center, center);
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $third-color;
+  z-index: 15;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+    background-color: $third-color;
+    opacity: 0.25;
+  }
+
+  &__link {
+    display: block;
+    @include flex(center, center);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    width: 22px;
+    height: 31px;
+    fill: $primary-color;
+    z-index: 20;
+  }
+
+  &:hover {
+    #{$this}__icon {
+      fill: $primary-color--hover;
+    }
+  }
+}
+
+.arrow-up {
+  position: fixed;
+  right: 53px;
+  bottom: 60px;
+  @include flex(center, center);
+  width: 53px;
+  height: 53px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+  background-color: $primary-color;
+  border-radius: 100%;
+  z-index: 25;
+  transition: .3s ease-in-out;
+  @media (max-width: $media-md) {
+    right: 33px;
+    bottom: 30px;
+  }
+
+  &:hover {
+    background-color: $primary-color--hover;
+  }
+
+  &__icon {
+    width: 17px;
+    height: 25px;
+    color: white;
+  }
+}

@@ -1,0 +1,13 @@
+.footer {
+  background-color: $background-dark-color;
+  padding: 13px 15px;
+  @include flex(center, center);
+
+  &__container {
+    @include flex(space-between, center);
+    flex-wrap: wrap;
+    @media (max-width: $media-sm) {
+      @include flex(space-around, center);
+    }
+  }
+}

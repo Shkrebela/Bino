@@ -1,0 +1,17 @@
+.pricing {
+  background-color: white;
+
+  .pricing__box {
+    @include flex(space-around, center);
+    flex-wrap: wrap;
+  }
+
+  .pricing__sub-box {
+    width: 33.33%;
+    padding: 15px;
+    @include flex(center, center);
+    @media (max-width: $media-lg) {
+      width: 100%;
+    }
+  }
+}

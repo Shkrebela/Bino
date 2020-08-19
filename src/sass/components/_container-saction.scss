@@ -1,0 +1,34 @@
+$main-padding: 15px;
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-max {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 140px $main-padding;
+
+  &--side-non {
+    padding: 140px 0 0;
+  }
+
+  @media (max-width: $media-xl) {
+    padding: 90px $main-padding;
+    &--side-non {
+      padding: 90px 0 0;
+    }
+  }
+  @media (max-width: $media-md) {
+    padding: 70px $main-padding;
+    &--side-non {
+      padding: 70px 0 0;
+    }
+  }
+}
