@@ -1,7 +1,7 @@
 .main-header {
   position: fixed;
   width: 100%;
-  padding: 5px $main-padding;
+  padding: 5px 15px;
   background-color: rgba(83, 83, 83, 0.40);
   z-index: 100;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -15,12 +15,12 @@
     @include flex(space-between, center);
     font: $font-first;
     text-transform: uppercase;
-    color: #f4f5f9;
+    color: $third-color;
     max-width: 650px;
     width: 100%;
     transition: left .3s ease-in-out;
 
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       position: absolute;
       top: 0;
       left: 100%;
@@ -43,13 +43,13 @@
     padding: 20px 5px;
     border-bottom: 1px solid transparent;
     cursor: pointer;
-    color: $white-color;
+    color: $third-color;
     transition: .3s ease-in-out;
 
     &:hover {
-      color: $primary-hover-color;
-      border-bottom: 1px solid $primary-hover-color;
-      @media (max-width: $media-netbook) {
+      color: $primary-color--hover;
+      border-bottom: 1px solid $primary-color--hover;
+      @media (max-width: $media-md) {
         border-bottom: 1px solid transparent;
       }
     }
@@ -63,23 +63,23 @@
     font: $font-second;
     text-transform: uppercase;
     font-size: 2.57rem;
-    font-weight: $semi-bold;
-    color: $dark-color;
+    font-weight: 600;
+    color: $second-color;
     margin-bottom: 29px;
-    @media (max-width: $media-PC1) {
+    @media (max-width: $media-xl) {
       margin-bottom: 20px;
     }
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       margin-bottom: 15px;
     }
   }
 
   &__text {
     margin-bottom: 28px;
-    @media (max-width: $media-PC1) {
+    @media (max-width: $media-xl) {
       margin-bottom: 20px;
     }
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       margin-bottom: 15px;
     }
   }

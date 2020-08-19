@@ -1,5 +1,5 @@
 .collaboration {
-  background-color: $white-color;
+  background-color: $third-color;
   border-bottom: 1px solid #e6e7eb;
 
   &__box {
@@ -11,13 +11,13 @@
     max-width: 20%;
     width: 100%;
     padding: 0 5px 25px 0;
-    @media (max-width: $media-notebook) {
+    @media (max-width: $media-lg) {
       max-width: 25%;
     }
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       max-width: 33.33%;
     }
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       max-width: 50%;
     }
   }

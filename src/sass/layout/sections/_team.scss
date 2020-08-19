@@ -42,11 +42,11 @@
     transform: translateX(-50%);
     bottom: 275px;
 
-    @media (max-width: $media-PC1) {
+    @media (max-width: $media-xl) {
       max-width: 900px;
       padding: 0 50px;
     }
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       flex-direction: column;
       position: unset;
       left: unset;
@@ -63,29 +63,29 @@
   }
 
   &__box {
-    &--position-1 {
+    &:nth-child(1) {
       top: 0;
-      @include media(0px, -28px);
+      @include media-xl-xxl(top, 0, -28px);
     }
 
-    &--position-2 {
+    &:nth-child(2) {
       top: -39px;
-      @include media(-39px, -45px);
+      @include media-xl-xxl(top, -39px, -45px);
     }
 
-    &--position-3 {
+    &:nth-child(3) {
       top: -40px;
-      @include media(-40px, -40px);
+      @include media-xl-xxl(top, -40px, -40px);
     }
 
-    &--position-4 {
+    &:nth-child(4) {
       top: 0;
-      @include media(0, -12px);
+      @include media-xl-xxl(top, 0, -12px);
     }
 
-    &--position-5 {
+    &:nth-child(5) {
       top: -25px;
-      @include media(0px, 0px);
+      @include media-xl-xxl(top, 0, 0);
     }
   }
 }

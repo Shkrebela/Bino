@@ -1,6 +1,6 @@
 .portfolio {
   &__container {
-    padding: 0 $main-padding;
+    padding: 0 15px;
   }
 
   &__box {
@@ -17,10 +17,10 @@
     width: 25%;
     display: none;
 
-    @media (max-width: $media-notebook) {
+    @media (max-width: $media-lg) {
       width: 50%;
     }
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       width: 100%;
     }
   }

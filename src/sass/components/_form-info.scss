@@ -3,11 +3,12 @@
   height: 100%;
   padding: 100px 90px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  background-color: $snow-white-color;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  background-color: white;
+  @include flex(space-between, flex-start);
   flex-direction: column;
+  @media (max-width: $media-lg) {
+    padding: 50px 45px;
+  }
 }
 
 

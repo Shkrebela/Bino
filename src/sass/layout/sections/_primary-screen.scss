@@ -7,7 +7,7 @@
   padding: 100px 0 50px;
   overflow: hidden;
   z-index: 50;
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-sm) {
     padding: 70px 0 50px;
   }
 
@@ -28,9 +28,9 @@
     bottom: -2px;
     left: 0;
     border-top: 10vh solid transparent;
-    border-right: 50vw solid #fff;
-    border-left: 50vw solid #fff;
-    border-bottom: 40px solid #fff;
+    border-right: 50vw solid white;
+    border-left: 50vw solid white;
+    border-bottom: 40px solid white;
   }
 
   &__container {

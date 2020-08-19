@@ -1,3 +1,4 @@
+@import 'abstracts/_mixin.scss';
 @import 'abstracts/_variables.scss';
 
 @import 'base/_fonts.scss';
@@ -6,13 +7,13 @@
 
 @import 'vendors/_swiper.scss';
 
+@import 'components/_advantages-block.scss';
 @import 'components/_article.scss';
 @import 'components/_blog-card.scss';
 @import 'components/_buttons.scss';
 @import 'components/_company-card.scss';
 @import 'components/_contact-info.scss';
-@import 'components/_contanir-saction.scss';
-@import 'components/_dynamic-block.scss';
+@import 'components/_container-saction.scss';
 @import 'components/_extra-menu.scss';
 @import 'components/_form-info.scss';
 @import 'components/_input.scss';

@@ -1,4 +1,5 @@
 .project-card {
+  $this: &;
   position: relative;
   width: 100%;
   line-height: 0;
@@ -18,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $primary-color-transparent;
+    background-color: $primary-color--transparent;
     opacity: 0;
     padding: 50px;
     transition: .3s ease-in-out;
@@ -26,11 +27,11 @@
     &:hover {
       opacity: 1;
 
-      .project-card__title {
+      #{$this}__title {
         top: 0
       }
 
-      .project-card__description {
+      #{$this}__description {
         top: 0
       }
     }
@@ -51,22 +52,17 @@
     position: relative;
     top: -100px;
     font-size: 1.74rem;
-    font-weight: $semi-bold;
+    font-weight: 600;
     text-transform: uppercase;
-    color: $white-color;
+    color: $third-color;
     margin-bottom: 21px;
     transition: .3s ease-in-out;
   }
 
   &__description {
-    color: $white-color;
+    color: $third-color;
     position: relative;
     top: 100px;
     transition: .3s ease-in-out;
-  }
-
-  &__img {
-    &.pop-up {
-    }
   }
 }

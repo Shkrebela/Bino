@@ -1,8 +1,8 @@
 .study-block {
   padding: 80px 61px 115px;
   z-index: 1;
-  background-color: $snow-white-color;
-  @media (max-width: $media-netbook) {
+  background-color: white;
+  @media (max-width: $media-md) {
     padding: 80px 25px 115px
   }
 
@@ -18,15 +18,15 @@
     width: 40px;
     height: 100%;
     transform: rotate(-45deg);
-    fill: $snow-white-color;
+    fill: white;
   }
 
   &__title {
     font: $font-first;
     position: relative;
     font-size: 1.286rem;
-    font-weight: $semi-bold;
-    color: $dark-color;
+    font-weight: 600;
+    color: $second-color;
     margin-bottom: 58px;
 
     &::after {
@@ -37,7 +37,7 @@
       bottom: -29px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $dark-color;
+      background-color: $second-color;
     }
   }
 

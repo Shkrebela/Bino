@@ -5,7 +5,7 @@
 
   &__link-box {
     text-transform: uppercase;
-    color: $text-dark-color;
+    color: $text-color--dark;
 
     &::after {
       content: "/";
@@ -18,7 +18,7 @@
   }
 
   &__link {
-    color: $text-dark-color;
+    color: $text-color--dark;
     cursor: pointer;
 
     &:hover {

@@ -1,23 +1,19 @@
 .blog-card {
-  max-width: 480px * 2;
-  width: 50%;
-  height: 100%;
+  $this: &;
+  max-width: 100%;
   display: flex;
   position: relative;
-  @media (max-width: $media-PC0) {
-    width: 100%;
-  }
-  @media (max-width: $media-tablet) {
-    max-width: 100%;
+
+  @media (max-width: $media-sm) {
     flex-wrap: wrap;
   }
 
   &:hover {
-    .blog-card__description {
+    #{$this}__description {
       &::after {
         opacity: 1;
       }
-      @media (max-width: $media-tablet) {
+      @media (max-width: $media-sm) {
         max-width: unset;
         height: unset;
         margin-top: unset;
@@ -27,15 +23,14 @@
   }
 
   &__description {
+    max-width: 50%;
     padding: 70px 50px;
     background-color: $primary-color;
-    color: $snow-white-color;
-    max-width: 50%;
-    min-width: 275px;
+    color: white;
     position: relative;
     text-align: left;
     transition: .3s ease-in-out;
-    @media (max-width: $media-PC1) {
+    @media (max-width: $media-xl) {
       padding: 50px 30px;
     }
 
@@ -51,12 +46,12 @@
       opacity: 0;
       transform: translate(-100%, -50%);
       transition: .3s ease-in-out;
-      @media (max-width: $media-tablet) {
+      @media (max-width: $media-sm) {
         display: none;
       }
     }
 
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       max-width: 100%;
       height: 200px;
       margin-top: -200px;
@@ -66,9 +61,8 @@
   }
 
   &__img-link {
-    min-width: 275px;
     width: 50%;
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       width: 100%;
     }
   }
@@ -83,7 +77,7 @@
   &__sub-title {
     padding: 0 0 32px;
     display: block;
-    color: $snow-white-color;
+    color: white;
   }
 
   &__title {
@@ -92,7 +86,7 @@
     text-transform: uppercase;
     margin-bottom: 73px;
     position: relative;
-    color: $snow-white-color;
+    color: white;
 
     &::after {
       content: "";
@@ -101,7 +95,7 @@
       bottom: -24px;
       width: 44px;
       height: 4px;
-      background-color: $snow-white-color;
+      background-color: white;
     }
   }
 
@@ -114,14 +108,14 @@
   &__text {
     font-size: 1.14rem;
     margin-bottom: 55px;
-    color: $snow-white-color;
+    color: white;
   }
 
   &__link {
-    font-style: $font-style;
+    font-style: italic;
+    font-weight: 700;
     font-size: 1.28rem;
-    color: $snow-white-color;
-    font-weight: $semi-bold;
+    color: white;
     cursor: pointer;
     padding: 15px 0;
 
@@ -133,7 +127,7 @@
   &--revers {
     flex-direction: row-reverse;
 
-    .blog-card__description {
+    #{$this}__description {
       &:after {
         left: 99%;
         transform: translate(0%, -50%) scalex(-1);

@@ -1,16 +1,17 @@
 .menu-toggle {
+  $this: &;
   display: none;
   width: 35px;
   height: 35px;
   cursor: pointer;
   padding: 15px 5px;
   z-index: 150;
-  @media (max-width: $media-netbook) {
+  @media (max-width: $media-md) {
     display: block;
   }
 
   &--active-menu-toggle {
-    .menu-toggle__line {
+    #{$this}__line {
 
       &::before {
         top: 0;
@@ -34,7 +35,7 @@
     display: block;
     width: 25px;
     height: 2px;
-    background-color: $white-color;
+    background-color: $third-color;
     transition: 0s;
 
     &::before, &::after {
@@ -69,14 +70,14 @@
   font: $font-first;
   text-transform: uppercase;
   font-weight: 700;
-  color: $snow-white-color;
+  color: white;
   background-color: $primary-color;
   cursor: pointer;
   transition: .3s ease-in-out;
 
   &:hover {
-    background-color: $primary-hover-color;
-    border: 1px solid $primary-hover-color;
+    background-color: $primary-color--hover;
+    border: 1px solid $primary-color--hover;
   }
 
   &--indent-right {
@@ -92,14 +93,14 @@
   }
 
   &--grey {
-    background-color: $text-dark-color;
-    border: 1px solid $text-dark-color;
+    background-color: $text-color--dark;
+    border: 1px solid $text-color--dark;
   }
 
   &--transparent {
     background-color: transparent;
-    color: $white-color;
-    border: 1px solid $white-color;
+    color: $third-color;
+    border: 1px solid $third-color;
   }
 
   &--adaptive {
@@ -107,12 +108,12 @@
     min-height: 4em;
     margin: 0 15px 15px;
     font-size: 1rem;
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       max-width: 12em;
       min-height: 3em;
       font-size: 0.857rem;
     }
-    @media (max-width: $media-PC1) {
+    @media (max-width: $media-xl) {
       max-width: 14em;
       min-height: 4em;
       font-size: 0.857rem;
@@ -121,6 +122,7 @@
 }
 
 .arrow-down {
+  $this: &;
   @include flex(center, center);
   position: absolute;
   width: 64px;
@@ -129,7 +131,7 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #f4f5f9;
+  background-color: $third-color;
   z-index: 15;
   cursor: pointer;
   transition: .3s ease-in-out;
@@ -140,7 +142,7 @@
     border-radius: 50%;
     width: 74px;
     height: 74px;
-    background-color: $white-color;
+    background-color: $third-color;
     opacity: 0.25;
   }
 
@@ -159,13 +161,17 @@
   }
 
   &:hover {
-    .arrow-down__icon {
-      fill: $primary-hover-color;
+    #{$this}__icon {
+      fill: $primary-color--hover;
     }
   }
 }
 
 .arrow-up {
+  position: fixed;
+  right: 53px;
+  bottom: 60px;
+  @include flex(center, center);
   width: 53px;
   height: 53px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
@@ -173,30 +179,18 @@
   border-radius: 100%;
   z-index: 25;
   transition: .3s ease-in-out;
-
-  &:hover {
-    background-color: $primary-hover-color;
+  @media (max-width: $media-md) {
+    right: 33px;
+    bottom: 30px;
   }
 
-  &__link {
-    @include flex(center, center);
-    width: 100%;
-    height: 100%;
+  &:hover {
+    background-color: $primary-color--hover;
   }
 
   &__icon {
     width: 17px;
     height: 25px;
-    color: $snow-white-color;
-  }
-
-  &--flow {
-    position: fixed;
-    right: 53px;
-    bottom: 60px;
-    @media (max-width: $media-netbook) {
-      right: 33px;
-      bottom: 30px;
-    }
+    color: white;
   }
 }

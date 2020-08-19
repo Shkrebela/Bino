@@ -32,20 +32,21 @@
     height: 45px;
     border-radius: 2px;
     background-color: rgb(119 119 119 / 60%);
-    color: $white-color;
+    color: $third-color;
     transition: all .3s ease-in-out;
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       background-color: transparent;
       width: 15px;
     }
 
     &:hover {
       background-color: $primary-color;
-      color: $white-color;
-      @media (max-width: $media-netbook) {
+      color: $third-color;
+      @media (max-width: $media-md) {
         background-color: transparent;
         color: $primary-color;
       }
+
       &::after {
         opacity: 1;
       }
@@ -82,7 +83,7 @@
         display: block;
         width: 1px;
         height: 34px;
-        background-color: $dark-color;
+        background-color: $second-color;
       }
     }
 
@@ -107,7 +108,7 @@
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
-      background-color: $text-dark-color;
+      background-color: $text-color--dark;
     }
 
     .swiper-pagination-bullet-active {

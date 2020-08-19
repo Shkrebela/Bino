@@ -1,5 +1,5 @@
 .title {
-  color: $dark-color;
+  color: $second-color;
   text-transform: uppercase;
   margin: 0 0 50px 0;
   padding-left: 30px;
@@ -15,6 +15,6 @@
   }
 
   &--white {
-    color: $white-color;
+    color: $third-color;
   }
 }

@@ -1,25 +1,25 @@
 .input-form {
   position: relative;
   width: 100%;
-  color: $text-dark-color;
+  color: $text-color--dark;
 
   &__input,
   &__textarea {
-    font-weight: $semi-bold;
-    color: $text-dark-color;
+    font-weight: 600;
+    color: $text-color--dark;
     margin-bottom: 10px;
     padding: 0 7px;
     border: 0;
     width: 100%;
     min-height: 50px;
-    border-bottom: 1px solid $text-dark-color;
+    border-bottom: 1px solid $text-color--dark;
     transition: .3s ease-in-out;
     &:focus {
       border-bottom: 1px solid $primary-color;
     }
 
     &::placeholder {
-      color: $text-dark-color;
+      color: $text-color--dark;
       transition: .3s ease-in-out;
     }
 

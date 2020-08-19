@@ -1,31 +1,32 @@
 .blog {
   &__container {
-    padding: 0 $main-padding;
+    padding: 0 15px;
   }
 
-  &__box {
+  &__container-max {
     @include flex(center, center);
     flex-wrap: wrap;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
     overflow: hidden;
   }
 
-  @media (max-width: $media-PC0) {
-    &__blog-card--1 {
-      order: 1;
-    }
+  &__box {
+    width: 50%;
 
-    &__blog-card--2 {
-      order: 3;
-    }
+    @media (max-width: $media-lg) {
+      width: 100%;
 
-    &__blog-card--3 {
-      order: 2;
-    }
-    &__blog-card--4 {
-      order: 4;
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 2;
+      }
+      &:nth-child(4) {
+        order: 4;
+      }
     }
   }
 }

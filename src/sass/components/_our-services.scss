@@ -20,7 +20,7 @@
   &__box {
     max-width: 100%;
     margin-right: 42px;
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       margin-right: 15px;
     }
   }
@@ -43,8 +43,8 @@
     min-width: 69px;
     height: 69px;
     border-radius: 100%;
-    background-color: $white-color;
-    border: 5px solid $white-color-transparent;
+    background-color: $third-color;
+    border: 5px solid $third-color--transparent;
     background-clip: padding-box;
   }
 

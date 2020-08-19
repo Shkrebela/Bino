@@ -1,5 +1,5 @@
 .case-study {
-  background-color: $white-color;
+  background-color: $third-color;
 
   &__box {
     position: relative;
@@ -13,7 +13,7 @@
     padding-right: 100px;
     width: 100%;
     height: 87%;
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       max-width: 765px;
       width: 100%;
       height: 100%;
@@ -29,11 +29,11 @@
     width: 50%;
     height: 100%;
     object-fit: cover;
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       left: 20%;
       width: 80%;
     }
-    @media (max-width: $media-tablet) {
+    @media (max-width: $media-sm) {
       display: none;
     }
   }

@@ -3,7 +3,7 @@
 
   .advantages__container {
     @include flex(space-around, center);
-    @media (max-width: $media-netbook) {
+    @media (max-width: $media-md) {
       flex-wrap: wrap;
     }
   }

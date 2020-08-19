@@ -1,13 +1,13 @@
 html,
 body {
   font: $font-first;
-  @media (max-width: $media-PC1) {
+  @media (max-width: $media-xl) {
     font-size: 12px;
   }
 }
 
 p, span {
-  color: $text-dark-color;
+  color: $text-color--dark;
 }
 
 
