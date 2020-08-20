@@ -9,19 +9,20 @@ This user guide helps you to run the project's copy on your local device that yo
 
 ### Prerequisites
 Before installing project on your location machine must be installed node.js and npm.<br>
-If you haven't a such software you must install. For install you can follow [this link](https://nodejs.org/uk/download/package-manager/)
+If you haven't such software you must install it. For install, you can follow [this link](https://nodejs.org/uk/download/package-manager/)
 
 ### Installing
 
-For installing project need clone repository in your location folder and install npm packet then run local server whit this project. 
-
+For installing the project need clone the repository in your location folder and install npm packet then run local server whit this project. 
 Please follow the steps below:
+
 **First step**<br> 
 Clone the project from the repository to the folder on your device.
 ```
 git clone git@github.com:Shkrebela/Bino.git
 ```
 **Second step**<br> 
+
 Go to the folder
 ```
 cd Bino/
