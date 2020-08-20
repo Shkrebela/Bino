@@ -1,6 +1,6 @@
 # Lending Bino
 This project made for a portfolio and isn't commercial project.<br> 
-Template for project was take on [this link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
+Template for the project was taken on [this link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
 
 ![](https://github.com/Shkrebela/TEST/blob/master/ezgif.com-resize%20(1).gif?raw=true)
 
@@ -9,18 +9,18 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 Before installing project on your location machine must be installed node.js and npm.<br>
-If you haven't a such software you must install. For install you can follow [this link](https://nodejs.org/uk/download/package-manager/)
+If you haven't such software you must install it. For install, you can follow [this link](https://nodejs.org/uk/download/package-manager/)
 
 ### Installing
-For installing project need clone repository in your location folder and install npm packet then run local server whit this project. 
+For installing the project need clone the repository in your location folder and install npm packet then run local server whit this project. 
 
 **First step**<br> 
-This step for clone project of repository to location folder
+This step for clone project of the repository to location folder
 ```
 git clone git@github.com:Shkrebela/Bino.git
 ```
 **Second step**<br> 
-This step for enter the project folder
+This step for entering the project folder
 ```
 cd Bino/
 ```
