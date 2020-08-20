@@ -1,43 +1,45 @@
 # Lending Bino
-This project made for a portfolio and isn't commercial project.<br> 
-Template for project was take on [this link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
+The project was created for the portfolio (non-commercial purposes).<br> 
+Find the template use the [link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
 
 ![](https://github.com/Shkrebela/TEST/blob/master/ezgif.com-resize%20(1).gif?raw=true)
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for assessment skills.
+This user guide helps you to run the project's copy on your local device that you could estimate the skill set.
 
 ### Prerequisites
 Before installing project on your location machine must be installed node.js and npm.<br>
 If you haven't a such software you must install. For install you can follow [this link](https://nodejs.org/uk/download/package-manager/)
 
 ### Installing
+
 For installing project need clone repository in your location folder and install npm packet then run local server whit this project. 
 
+Please follow the steps below:
 **First step**<br> 
-This step for clone project of repository to location folder
+Clone the project from the repository to the folder on your device.
 ```
 git clone git@github.com:Shkrebela/Bino.git
 ```
 **Second step**<br> 
-This step for enter the project folder
+Go to the folder
 ```
 cd Bino/
 ```
 **Third step**<br> 
-This step for install all npm package and plugin which point in package.json
+Install all npm packages and plugin which you find in the package.json 
 ```
 npm install
 ```
 **Forth step**<br>
-This step for created folder dist, and a local server for running project
+This step is creating the folder "dist" and local server
 ```
 npm run dev 
 
 npm run hot 
 ```
 **Fifth step**<br>
-Open this link http://localhost:8080 in your browser
+Open the link http://localhost:8080 using your browser.
 
 ## Built With
 
@@ -47,5 +49,5 @@ Open this link http://localhost:8080 in your browser
 * Bundler - Laravel Mix
 * Library - Swiper (slider)
 
-## Author
+## Developer
 **Shkrebela Andrey** 

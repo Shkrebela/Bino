@@ -1,6 +1,7 @@
 .counter {
   position: relative;
   background-size: cover;
+  background-image: url('../../../img/background-counter.jpg');
 
   &::after {
     content: "";

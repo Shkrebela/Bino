@@ -1,19 +1,22 @@
 const mix = require('laravel-mix');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-mix.config.publicPath='dist';
-mix.config.sourcemaps='true';
-console.log(mix.config)
-mix.js('src/js/main.js', 'dist/js/index.js')
-    .sass('src/sass/main.scss', 'dist/css')
-    .copyDirectory('src/font', 'dist/font')
-    .copyDirectory('src/img', 'dist/img')
+mix.config.publicPath = 'dist';
+mix.config.resourceRoot = './';
+mix.config.fileLoaderDirs = {images: 'img', fonts: 'font'};
+mix.setPublicPath('dist')
+    .sourceMaps()
+    .js('src/js/main.js', 'dist/js/index.js')
+    .sass('src/sass/main.scss', 'dist/')
+    .copy('src/img/*.svg', 'dist/img/')
+
 
 mix.webpackConfig({
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Custom template',
-            template: './src/index.html'
+            template: 'src/index.html',
+            filename: './index.html',
+            inject: false,
         })
     ]
 })
