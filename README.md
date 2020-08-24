@@ -11,29 +11,28 @@ This user guide helps you to run the project's copy on your local device that yo
 Before launching the project on your local machine must be installed node.js and npm.<br>
 If you haven't such software use [this link](https://nodejs.org/uk/download/package-manager/) for installing.
 
-### Installing
+### Launching
 
 For launching the project you need to clone the repository on your local folder and install the npm packages after that run the local server with this project.  
 <br> 
 Please follow the steps below using the command line:
 
-**1th step**<br> 
+**1th Step**<br> 
 Clone the project from the repository to the folder on your device.
 ```
 git clone https://github.com/Shkrebela/Bino.git
 ```
-**2nd step**<br> 
-
+**2nd Step**<br> 
 Go to the folder
 ```
 cd Bino/
 ```
-**3rd step**<br> 
+**3rd Step**<br> 
 Install all npm packages and plugins which contains in the package.json 
 ```
 npm install
 ```
-**4th step**<br>
+**4th Step**<br>
 Launch the Laravel Mix for:<br> 
 - creating the folder "dist" and generating files;<br> 
 
@@ -44,7 +43,7 @@ npm run dev
 ```
 npm run hot 
 ```
-**5th step**<br>
+**5th Step**<br>
 Open the link http://localhost:8080 using your browser.
 
 ## Built With
