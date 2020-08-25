@@ -1,6 +1,7 @@
-# Lending Bino
+# Landing Bino
 The project was created for the portfolio (non-commercial purposes).<br> 
-Find the template using the [link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template)
+Find the template using the [link](https://www.behance.net/gallery/28954423/Freebie-Bino-Landing-Page-PSD-Template) <br> 
+Also you can visit this [page](https://shkrebela.github.io/Bino/) to view the site on GitHub Page 
 
 ![](https://github.com/Shkrebela/TEST/blob/master/ezgif.com-resize%20(1).gif?raw=true)
 
